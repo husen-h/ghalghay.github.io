@@ -70,6 +70,8 @@ $(function(){
 //var prevValue,prevPattern; //Alex_Piggy add  Для ускорения (раза в два). Смысл в том, чтобы он выражение поиска считал один раз за изменение, а не для каждой строки отдельно
 
 
+//регистронезавис .replace(/.../gi,
+
 //REGEX
 function gCalculateFilterExpression (value, selectedFilterOperations, target, self) {
     var getter = function(data) {
@@ -110,13 +112,25 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(<code>)/g," "); //чтобы слова не слипались после удаления всех тегов
 
 
+
+
+
+
         data = data.replace(/(\u0301|\u0300|\u0308|\u0302|\u030C|\u0304|<\/y>~|\u007C\u007C|<[^>]*>|\u00B6)/g,""); //¶=u00B6||̈=\u0308||    диапазон символов: [\u0300-\u036f]  [̀ - \u0300]
+
+
+
+
+
+
+
 
 
         //data = data.replace(/(\u04C0|\u04CF)/g, "\u0031"); /*палочки на единицу*/
 
 
         //data = data.replace(/(\u0041|\u0061)(\u0302|\u030C|\u0304|\u0306)/g,"\u0430"); 	//Ââ(â)/Ǎǎ(ǎ)/Āā(ā)/̆——а
+
 
 
 
@@ -139,7 +153,7 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
 
 
 
-/* фриланс // add: «else if {}» */
+/* фрил // add: «else if {}» */
     if (target === "filterRow") { // && selectedFilterOperations == 'contains'
         return [function(dataItem) {
             var pattern = getter(value);
@@ -148,7 +162,7 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
             pattern = pattern.replace(/\\b/g, '(?=\\s|[^\\u0400-\\u04FF\\w]|\\b|$)');
             pattern = pattern.replace(/@/g, '[\\u0400-\\u04FF\\w]');
             pattern = pattern.replace(/,,/g, '.*');
-            pattern = pattern.replace(/,/g, '[\\u0400-\\u04FF\\w]*');
+            pattern = pattern.replace(/,/g, '([\\u0400-\\u04FF\\w]*|,)'); //добав. «|,» — для обработк. зап.
 
             //двойные в начале
             pattern = pattern.replace(/</g, '(оа|аь|яь|а|е|ё|и|о|у|ы|э|ю|я)');
@@ -485,9 +499,72 @@ $(function(){
              var text = rowData.b.replace(/#/g,"");
              //////text = text.replace(/(<li><b>.*?<\/b>)\r\n<li><l>(<b>.*?<\/b>)<\/l>/g, "<li>$2$1");
              text = text.replace(/(\|\|)/g, "<sep3>||</sep3>");
+
+
+//Николс
+//Николс
+//Николс
              //text = text.replace(/(\u0431|\u0432|\u0434)\u002E(\u0430|\u0435|\u0438|\u043E|\u04C0|\u0443)/g,"<cc>$1</cc>$2"); //Николс — обработка точки после кирилл. класса
              //text = text.replace(/([djbv])\.([äaeiouwy])/g,"<cc>$1</cc>$2"); //Николс — обработка точки после лат. класса
-             return text;
+
+   text = text.replace(/<tag>(Climb)<\/tag>/g, "<abr ttl='?'>$1</abr>");
+   text = text.replace(/<tag>(SubInd)<\/tag>/g, "<abr ttl='?'>$1</abr>");
+   text = text.replace(/<tag>(All)<\/tag>/g, "<abr ttl='Аллятивный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Abl)<\/tag>/g, "<abr ttl='Аблативный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Csn)<\/tag>/g, "<abr ttl='Сравнительный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Comp|Compl)<\/tag>/g, "<abr ttl='Комплементация'>$1</abr>");
+   text = text.replace(/<tag>(CV)<\/tag>/g, "<abr ttl='Деепричастие'>$1</abr>");
+   text = text.replace(/<tag>(Dat)<\/tag>/g, "<abr ttl='Дательный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Erg)<\/tag>/g, "<abr ttl='Эргативный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Gen)<\/tag>/g, "<abr ttl='Родительный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Goal)<\/tag>/g, "<abr ttl='Цель действия'>$1</abr>");
+   text = text.replace(/<tag>(Inf)<\/tag>/g, "<abr ttl='Инфинитив'>$1</abr>");
+   text = text.replace(/<tag>(Ins|Instr)<\/tag>/g, "<abr ttl='Творительный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Lat)<\/tag>/g, "<abr ttl='Лативный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Location)<\/tag>/g, "<abr ttl='Местоположение'>$1</abr>");
+   text = text.replace(/<tag>(Nom)<\/tag>/g, "<abr ttl='Именительный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Obl)<\/tag>/g, "<abr ttl='Косвенный падеж'>$1</abr>");
+   text = text.replace(/<tag>(Source)<\/tag>/g, "<abr ttl='Источник'>$1</abr>");
+   text = text.replace(/<tag>(predicate nominal)<\/tag>/g, "<abr ttl='Предикативное имя'>$1</abr>");
+   text = text.replace(/<tag>(no core arguments)<\/tag>/g, "<abr ttl='Нет основных аргументов'>$1</abr>");
+
+
+   text = text.replace(/<t3>\[(1|2|3|3x|4|5|6|7|8|9|10|11|12|13|14|15)\]<\/t3>/g, "<a class='bord_bott' href='src/izd/Nichols2004.html#nic_$1' target='blank'><t3>[$1]</t3></a>");
+   text = text.replace(/<t3>\[(I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII|XIV|XV|XVI)\]<\/t3>/g, "<a class='bord_bott' href='src/izd/Nichols2004.html#nic_$1' target='blank'><t3>[$1]</t3></a>");
+
+   text = text.replace(/→ (XIII|XI)\?/g, "→ <a class='bord_bott' href='src/izd/Nichols2004.html#nic_$1' target='blank'>$1</a>?");
+   text = text.replace(/-(VI)\?/g, "-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_$1' target='blank'>$1</a>?");
+
+
+
+   text = text.replace(/&lt;IRV-(d\.aalar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_daalar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.alar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_dalar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.ar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_dar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.aaqqar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_daaqqar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.aar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_daar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.aaxkar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_daaxkar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.ahwar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_dahwar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.axar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_daxar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(d\.ettar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_dettar' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV-(guor|xalar)&gt;/g, "&lt;IRV-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_$1' target='blank'>$1</a>&gt;");
+   text = text.replace(/&lt;IRV\?-(d\.axkar) /g, "&lt;IRV?-<a class='bord_bott' href='src/izd/Nichols2004.html#nic_daxkar' target='blank'>$1</a> ");
+/*
+ettar
+d.ahwar
+d.axkar
+<IRV-daaghar>
+<IRV? deitar: дайта (айдайт, айдайтад>
+<IRV?-daastar даста (доаст, даьстад)>
+<IRV?-duolar до́ла/дол/деннад>
+<IRV?-wer Ӏе́ (Ӏа, Ӏийнад)>
+<IRV?-xaalar ха́ла (хоал, хаьлад?)>
+<IRV?-xaalar цаха́ла (цахоал, цахаьлай)>
+*/
+
+
+
+             //return text;
+             return b_d_column_repl(text);
            }
         },
 
@@ -596,10 +673,17 @@ $(function(){
              var text = rowData.d.replace(/#/g,"");
              //var text = rowData.d.replace(/(—)/g, "–");  //длинное тире — на среднее
              text = text.replace(/(♦)/g, "<sep2>♦</sep2>");
+
+
+
              //text = text.replace(/( \d+\)| \d+\.) /g, "<br><li>$1 ");
              //text = text.replace(/([бвд])\.([аеиоӀу])/g,"<cc>$1</cc>$2"); //Николс — обработка точки после кирилл. класса
              //text = text.replace(/([djbv])\.([äaeiouwy])/g,"<cc>$1</cc>$2"); //Николс — обработка точки после лат. класса
-             return text;
+
+
+
+             //return text;
+             return b_d_column_repl(text);
            }
         },
 
@@ -808,7 +892,7 @@ $(function(){
 
 
 
-
+        $('trl').closest('li').addClass('li_trl'); //отдельный окрас тире для LI
 
 
         $('tr td:first-child ant21').closest('td').css('background-color', '#000000').addClass('ant21');
@@ -830,6 +914,14 @@ $(function(){
         $('tr td:first-child kur05').closest('td').css('background-color', '#114b3a').addClass('kur05');
         $('tr td:first-child nic04').closest('td').css('background-color', '#202a6d').addClass('nic04');
         // ...
+
+
+
+
+
+
+
+
 
 
 
@@ -917,11 +1009,72 @@ function fix(obj) {
 
    obj.value = obj.value.replace('\\\\\\', "(^|\\s|[^\\u0400-\\u04FF]|\\b)");
    obj.value = obj.value.replace('\/\/\/', "(?=\\s|[^\\u0400-\\u04FF]|\\b|$)");
-*/
+
    obj.value = obj.value.replace('БББ', "<");
    obj.value = obj.value.replace('ЮЮЮ', ">");
-
+*/
 
 }
 
 
+//общие замены для b-d-колонок
+function b_d_column_repl(text) {
+   text = text.replace(/(<t1>n\.<\/t1>)/g, "<abr ttl='Имя существительное'>$1</abr>");
+   text = text.replace(/(<t1>adj\.<\/t1>)/g, "<abr ttl='Имя прилагательное'>$1</abr>");
+   text = text.replace(/(<t1>adv\.<\/t1>)/g, "<abr ttl='Наречие'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. iter\. pl\.)/g, "<abr ttl='Глагол многократный, мн. ч.'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. iter\.)/g, "<abr ttl='Глагол многократный'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. simul\. pl\.)/g, "<abr ttl='Глагол однократный, мн. ч.'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. simul\. sg\.)/g, "<abr ttl='Глагол однократный, ед. ч.'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. simul\.)/g, "<abr ttl='Глагол однократный'>$1</abr>");
+   text = text.replace(/(<t1>v\. pl\.<\/t1>)/g, "<abr ttl='Глагол, мн. ч.'>$1</abr>");
+   text = text.replace(/(<t1>v\.<\/t1>)/g, "<abr ttl='Глагол'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(pl\. obj\.)/g, "<abr ttl='Мн. ч.'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(sg\. obj\.)/g, "<abr ttl='Ед. ч.'>$1</abr>");
+   text = text.replace(/(<t1>pl\.<\/t1>)/g, "<abr ttl='Мн. ч.'>$1</abr>");
+
+   text = text.replace(/(<i>See<\/i>)/g, "<abr ttl='Смотри'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(sp\.)/g, "<abr ttl='Вид'>$1</abr>");
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(spp\.)/g, "<abr ttl='Виды'>$1</abr>");
+//sp. (сокр. от лат. species) — вид; используется после родового названия и обозначает, что таксон определён с точностью до рода
+//spp. (сокр. от лат. species) — виды; используется после родового названия
+//1. Используется в качестве собирательного видового эпитета для обозначения всех таксонов, входящих в род
+//2. При использовании в списке таксонов рода: обозначает все остальные таксоны, входящие в этот род, которые не включены в данный список
+   text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(Id\.)/g, "<abr ttl='Идиома'>$1</abr>");
+
+
+
+
+
+
+
+
+
+
+
+   ////////////
+   ////////////
+   ////////////
+   ////////////
+   ////////////
+   //text = text.replace(/(?=\s|[^\w]|\b|$)(прил\.)/, "<abr ttl='Имя прилагательное'>$1</abr>"); //без g
+
+   //Николс — обработка точки после кирилл./лат. класса
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+   text = text.replace(/([бвд])\.([аеиоӀу])/,"<cls>$1</cls>$2");
+   text = text.replace(/([djbv])\.([äaeiouwy])/,"<cls>$1</cls>$2");
+
+
+   return text
+}

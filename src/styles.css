@@ -577,6 +577,11 @@ em u:before {
 	color:#009878;
 }*/
 
+
+
+
+
+
 /*https://qastack.ru/programming/7698764/custom-bullet-symbol-for-li-elements-in-ul-that-is-a-regular-character-and*/
 .dx-scrollable-container td li {
 	position: relative;
@@ -616,7 +621,7 @@ em u:before {
 
 
 
-strong {font-family:"Segoe UI Semibold";Xfont-weight:500 !important;}
+strong {Xfont-family:"Segoe UI Semibold";Xfont-weight:500 !important;}
 
 
 hr {COLOR:#00755B; margin:0.60em 0em 0.30em 0em; text-align:left; width:18%;}
@@ -633,7 +638,7 @@ hr {COLOR:#00755B; margin:0.60em 0em 0.30em 0em; text-align:left; width:18%;}
 
 /*<s><span>...</span></s>*/
 s { 
-    Xvertical-align: middle; color:#FF0000 !important;  /* цвет зачеркивающей линии */ 
+    Xvertical-align: middle; color:#F44A57 !important;  /* цвет зачеркивающей линии */ 
 } 
 s span {
     color:#222222 !important;  /* цвет зачеркиваемого текста */ 
@@ -678,6 +683,11 @@ r {
   color: #F44A57 !important; font-weight:bold;
 }
 
+/*Для выделения классов (Николс)*/
+cls {
+  color: #CB00CB !important;
+}
+
 
 /*Для выделения эргативных форм*/
 er {color:#9900CC;font-size:95%; white-space:nowrap !important;}
@@ -698,18 +708,46 @@ l {
 l b {Xfont-family:"Segoe UI Semibold"; font-weight:normal /*500*/ !important;}
 
 /*Для транслитерации*/
-trl {color:#485868; margin: 0px 2px 0px 0px; }
-em trl {color:#009878; margin: 0px 2px 0px 0px;}
-trl b {color:#3E3E4B; font-family:"Segoe UI Semibold"; font-weight:500 !important;}
-em trl:before {content: "|"; margin: 0px 5px 0px 1px; color:#32CD32;}
-Xem trl:after {content: "]"; margin: 0px 2px 0px 2px;}
+ttr {color:#485868; margin: 0px 2px 0px 0px; }
+em ttr {color:#009878; margin: 0px 2px 0px 0px;}
+ttr b {color:#3E3E4B; Xfont-family:"Segoe UI Semibold"; font-weight:500 !important;}
+em ttr:before {content: "|"; margin: 0px 5px 0px 1px; color:#32CD32;}
+Xem ttr:after {content: "]"; margin: 0px 2px 0px 2px;}
+
+
+
+/*Для переводных*/
+.li_trl:before { /*отдельный окрас тире для LI (см jQuery в index.js)*/
+	color:#F44A57 !important;}
+trl {color:#F44A57 !important;} /*F44A57 F08080 E1567C*/
+_trl:before {content: "\A"; white-space: pre;} /*\003C*/
+_trl:after {content: ""; white-space: pre;} /*\003E*/
+/*Для переводных второго уровня (♦) */
+trl#a2 {color:#F44A57 !important; } /*F44A57 F08080*/
+trl#a2:before {content: "\A\2666\0020"; /*♦ */ white-space: pre;} /*\003C*/
+trl#a2:after {content: ""; white-space: pre;} /*\003E*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Для блоков с частями речи и тп*/
 bl {color:#586E98 !important;}
-t1 {color:#CD5C5C; font-style:italic; white-space:nowrap !important;}
+t1 {color:#CD5C5C; font-style:italic; white-space:nowrap !important; }
 t2 {color:#586E98; font-style:italic; white-space:nowrap !important;}
 t3 {color:#808080; font-style:normal; white-space:nowrap !important; font-size: 90%; letter-spacing: 1px;}
 /*6D160A*/
+a.bord_bott, add t3 {border-bottom: 1px solid #0000FF !important; Xbackground-color:#EAF4FF;}
 
 
 /*Для ссылочных НЕвидимых. Вписывать в конце: \r\n<lnk>слово1\r\n<lnk>слово2*/
@@ -722,8 +760,11 @@ see:before {
 	content: "\2194  "; /*\2194 // \2195 // \21F5*/
 }
 
-/*Для доп. поясн <add>[слово]</add>   */
-add {color:#F44A57;}
+/*Для вставок, доп. поясн <add>[слово]</add>   */
+add, add t3, add t4 {color:#F44A57 !important; border-bottom: 1px dashed #F44A57;}
+
+
+
 
 /*Выделение переводов примеров употребления*/
 u {
@@ -945,7 +986,7 @@ a {
   .dx-datagrid .dx-column-lines > td {
     border-right: 0px solid #ffffff;     /*!!! вертикальные не-фильтра ячеек !!!!!!*/
   }
-  j {
+  j { /*<j>*/
     display: none !important; 
     height: 0px !important; 
     line-height:0px !important;
@@ -961,3 +1002,85 @@ a {
     display: none;
   }*/
 }
+
+
+
+
+
+
+
+
+
+
+/*
+abr[ttl]:hover:after {
+  content: attr(ttl);
+  padding: 4px 8px;
+  margin: -20px 0px 0 180px;
+  color: #333;
+  position: absolute !important; 
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 99999 !important; 
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+*/
+
+
+
+
+abr[ttl] {
+  cursor: help;
+  position: relative;
+  /* ensure consistent styling across browsers */
+  Xtext-decoration: underline dotted #0000ff;
+  text-decoration: none;
+  border-bottom: 1px dotted #0000ff;
+}
+abr[ttl]:hover::after,
+abr[ttl]:focus::after {
+  z-index: 99999 !important; 
+  content: attr(ttl);
+  /* position tooltip like the native one */
+  Xopacity: 0.9;
+  position: absolute;
+  left: 0;
+  margin: 0px 0px 0px 18px;
+  bottom: -5px;
+  width: auto;
+  white-space: nowrap;
+
+  /* style tooltip */
+  background-color: #273039;
+  color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.4);
+  font-size: 14px;
+  padding: 1px 5px 4px 5px;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #374049;
+  -webkit-box-shadow: 0px 0px 4px #374049;
+  box-shadow: 0px 0px 4px #374049;
+  background-image: -moz-linear-gradient(top, #000, #374049);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #000),color-stop(1, #374049));
+  background-image: -webkit-linear-gradient(top, #000, #374049);
+  background-image: -moz-linear-gradient(top, #000, #374049);
+  background-image: -ms-linear-gradient(top, #000, #374049);
+  background-image: -o-linear-gradient(top, #000, #374049);
+}
+
+
