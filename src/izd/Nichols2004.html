@@ -1,14 +1,253 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <title>Johanna Nichols. Ingush-English and English-Ingush dictionary (2004)</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <style>
 
-table{font-size:100% !important;}
 
-body{margin:1% 16% 1% 16%;font-size:120% !important; line-height:122% !important;
-word-spacing: 2px;color:#000050; margin-bottom: 5%;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
+
+
+html *, html ::after, html ::before {
+	box-sizing: inherit;
+}
+body, html {
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+}
+html *, html a, html li {
+	outline-color: inherit;
+}
+body {
+	font-size: 101%;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+	background-color: #ffffff;
+	color: #000050;
+	color: var(--theme-text);
+	min-height: 100vh;
+	line-height: 1.3;
+	margin-bottom: 5%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+
+/* /art-l */
+#als-expressform *, *, .als-share-circle, .share-circle, ::after, ::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+body, html {
+	height: auto;
+	min-height: 100%;
+}
+body {
+	margin: 0;
+	margin-bottom: 8% !important;
+	1font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	overflow-y: scroll;
+}
+body {
+	-webkit-font-feature-settings: "kern" 1, "liga" 0;
+	-moz-font-feature-settings: "kern" 1, "liga" 0;
+	font-feature-settings: "kern" 1, "liga" 0;
+}
+.als-body-wrap {
+	display: flex;
+	height: 100%;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+}
+.typograf-bg, body.typograf-bg .als-body-wrap, body.typograf-bg .als-footer-wrap, body.typograf-page, body.typograf-page .als-body-wrap, body.typograf-page .als-footer-wrap {
+	background: #ebebeb;
+}
+.als-body-wrap, .als-search-v4-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+}
+.als-header-2021-padding {
+	padding-top: 123px;
+}
+.als-content-wrap {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+.als-text-title {
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 43px!important;
+	line-height: 1.3;
+}
+/* @media all and (max-width:1400px) */
+.als-text-title {
+	font-size: 43px;
+}
+.als-tabs {
+	text-align: center;
+	font-size: 18px;
+	margin: 1.9em 10px 2em;
+	position: relative;
+}
+.als-tabs a	{color: #000!important;}
+.als-tabs a:hover {
+    background: rgba(0,0,0,.1);
+    color: #000!important;
+}
+.als-text-container, .als-text-container-size, .announce__text {
+	max-width: 920px;
+	margin: 0 auto;
+}
+.als-text, .als-text-container, .announce__text {
+	font-size: 21px;
+	padding: 0 1em;
+}
+/* @media all and (max-width:1400px) */
+.als-text, .als-text-container, .announce__text {
+	font-size: 19px;
+}
+.als-text .text-margin, .als-text p, .als-text-container .text-margin, .als-text-container p, .text-margin.als-text-container, .text-margin.als-text, .announce__text .text-margin, .announce__text p, .text-margin.announce__text {
+	margin: 1em auto .7em;
+}
+.als-text p, .als-text-container p, .announce__text p {
+	font-family: inherit;
+	font-size: inherit;
+}
+.als-logo-barcode, .blue-store-button, a.download, span.pause span {
+	position: relative;
+	font-weight: bold;
+}
+a:link {
+	color: #0089ff;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 137, 255, .3);
+	-webkit-transition: color .3s ease, border-color .3s ease;
+	transition: color .3s ease, border-color .3s ease;
+}
+a.download:hover:before {
+    opacity: .6;
+}
+a.download::before {
+	content: "";
+	display: block;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	left: -17px;
+	top: 6px;
+	background: url(./src/icons/download-icon.svg) no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.4;
+	-webkit-transition: opacity .3s cubic-bezier(.55, .08, .06, .97);
+	transition: opacity .3s cubic-bezier(.55, .08, .06, .97);
+}
+.als-tabs a {
+	font-size: inherit;
+	padding: .5em 1.2em;
+	text-decoration: none;
+	border: none;
+	position: relative;
+	display: inline-block;
+}
+.als-tabs span {
+	font-size: inherit;
+	padding: .0em 0em;
+	text-decoration: none;
+	border: none;
+	position: relative;
+	display: inline-block;
+}
+.als-tabs span a {
+	color: #ffffff !important;
+}
+.als-tabs span a:hover, .als-tabs span a:visited {
+	color: #ffffff !important;
+	background-color: #111BEF !important;
+}
+.als-tabs a {
+	color: #000;
+	background: rgba(0,0,0,.05);
+	cursor: pointer;
+}
+.als-tabs a:not(.selected) {
+	-webkit-transition: background .2s cubic-bezier(.55, .08, .06, .97);
+	transition: background .2s cubic-bezier(.55, .08, .06, .97);
+}
+.als-tabs .als-tabs-bg, .als-tabs a.pseudo-selected, .als-tabs a.selected, .als-tabs a.with-nav, .als-tabs span {
+	color: #fff;
+}
+.als-tabs .als-tabs-bg, .als-tabs a.selected, .als-tabs a.with-nav, .als-tabs span {
+	background: #4149F2;
+}
+.als-tabs ins {
+	outline: 0;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0px);
+	transform: translateX(0px);
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	line-height: 1.3;
+	vertical-align: baseline;
+}
+.als-tabs ins::before {
+	display: none;
+}
+.als-tabs .als-tabs-bg ins, .als-tabs a.pseudo-selected ins, .als-tabs a.selected ins, .als-tabs a.with-nav ins, .als-tabs span ins {
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+.als-tabs .als-tabs-bg ins::before, .als-tabs a.pseudo-selected ins::before, .als-tabs a.selected ins::before, .als-tabs a.with-nav ins::before, .als-tabs span ins::before {
+	left: -0.8em;
+	opacity: 1;
+}
+.als-text .h1, .als-text .subtitle, .als-text h1, .als-text-container .h1, .als-text-container .subtitle, .als-text-container h1, .als-text-title .h1, .als-text-title .subtitle, .als-text-title h1 {
+	font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 400;
+}
+.als-text .h1, .als-text h1, .als-text-container .h1, .als-text-container h1, .als-text-title .h1, .als-text-title h1 {
+	font-weight: 400;
+	font-size: inherit;
+	margin-bottom: 0.2em;
+	margin-top: 1.1em;
+}
+/* art-l/ */
+
+
+
+
+
+
+
+
+
+table{font-size:100% !important;}
 
 I, EM	{ font-style: italic; color:#2D41E3 !important; }
 
@@ -53,7 +292,7 @@ table, table td, table th {
   Xwidth: 33%;
 }
 table {
-  width: 90%;
+  width: 90%; font-size:100% !important;
   border-collapse: collapse;
 }
 table {margin:1.2em 0 1.2em 0;}
@@ -82,11 +321,12 @@ a {
 </style>
 </head>
 <body>
+<div class="als-body-wrap">
 
-
-
+<div class="als-content-wrap" data-als-search="wrapper">
+<div class="als-text-container">
 <h2 style="font-size:140% !important; text-align:center; margin-top: 0em; font-weight:400 !important;">Johanna Nichols</h2>
-<H1 style="margin: 1em 0 1em 0;">Ingush-English <br>and English-Ingush <br>dictionary</H1>
+<H1 style="margin: 1em 0 1em 0;">Ingush-English <br>and&nbsp;English-Ingush dictionary</H1>
 <H3 style="text-align:center; margin-bottom: 2em; font-weight:400 !important;">2004</H3>
 
 
@@ -1059,5 +1299,10 @@ Transitive verb with indirect object (ditransitive verb), e.g. 'give'.</td></tr>
 <tr id="568" valign=top><td class="b2">(Gen-Nom)</td><td>Verbs of possession with genitive possessor and nominative object, e.g. 'be, have'.</td></tr>
 </table>
 
+</div>
+</div>
+</div>
+
 </body>
 </html>
+
