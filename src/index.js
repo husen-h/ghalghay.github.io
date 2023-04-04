@@ -1022,6 +1022,7 @@ function b_d_column_repl(text) {
    text = text.replace(/(<t1>n\.<\/t1>)/g, "<abr ttl='Имя существительное'>$1</abr>");
    text = text.replace(/(<t1>adj\.<\/t1>)/g, "<abr ttl='Имя прилагательное'>$1</abr>");
    text = text.replace(/(<t1>adv\.<\/t1>)/g, "<abr ttl='Наречие'>$1</abr>");
+   text = text.replace(/(<t1>num\.<\/t1>)/g, "<abr ttl='Числительное'>$1</abr>");
    text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. iter\. pl\.)/g, "<abr ttl='Глагол многократный, мн. ч.'>$1</abr>");
    text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. iter\.)/g, "<abr ttl='Глагол многократный'>$1</abr>");
    text = text.replace(/(?=\s|[^\u0400-\u04FF\w]|\b|$)(v\. simul\. pl\.)/g, "<abr ttl='Глагол однократный, мн. ч.'>$1</abr>");
