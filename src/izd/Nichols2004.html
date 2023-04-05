@@ -8,22 +8,24 @@
 <style>
 
 h1,h2  {text-align:center !important;}
-p.cntr {text-align:center !important; border-bottom:1px solid #DDDDDD !important;}
 
-.trl		{ margin: 1em !important;}
-td.trl 		{ color:darkgreen !important; vertical-align:top !important;  } /*no Paragraph*/
-td.trl *	{ color:darkgreen !important; text-align:justify;  }
-TABLE.prl	{ width: 100%; text-align:justify; }
-TABLE.prl TD	{ width: 50%; padding: 0 1.5em 0 0 !important; vertical-align:top !important; }
+
+.trl2		{ margin: 1em !important;}
+
+.prl *,.trl2 *	{ border: 0px solid !important; text-align:justify; }
+td.trl2 		{ color:darkgreen !important; vertical-align:top !important;  } /*no Paragraph*/
+td.trl2 *	{ color:darkgreen !important; }
+TABLE.prl	{ width: 100%; color:#000050 !important; width: 100%; text-align:justify; }
+TABLE.prl TD	{ width: 50%; margin: 0; padding: 0px 1.5em 0px 0px !important; vertical-align:top !important;
+   			 Xborder-bottom: 1px solid #e8e9eb; }
+TABLE.trl1 TD	{ width: 50%; }
+TABLE.trl2 TD	{ width: 50%; }
+
 
 /*
 TABLE.prl a 	{ color:#E33A23 !important;}
 TABLE.prl a * 	{ color:#E33A23 !important;}
 */
-
-
-
-
 TABLE.prl a {color:#E33A23 !important;
 	text-decoration: none !important;
 	border-bottom: 1px solid !important;
@@ -45,13 +47,8 @@ TABLE.prl a:visited.fresh *, a:visited.footer * { color:#CC3399 !important;  bor
 
 
 
-table.prl {margin-top: 2em; font-size: 90%; width: 100%; border: 0px; border-collapse: collapse;}
-table.prl td {
-    padding: 0px; border-bottom: 1px solid #e8e9eb;
-    padding: 2px 5px 2px 5px;
-    margin: 0;
-    vertical-align: top;}
-@media screen and (max-width: 800px) {
+table.prl {margin: 0px 0px 0px 0px; font-size: 90%; width: 100%; border: 0px; border-collapse: collapse;}
+@media screen and (max-width: 600px) {
   table.prl tr {
     display: block;
     Xmargin-bottom: 1rem;
@@ -100,8 +97,8 @@ body {
 	flex-direction: column;
 	flex: 1 1 100%;
 	background-color: #ffffff;
-	color: #000050;
-	color: var(--theme-text);
+	Xcolor: #000050;
+	Xcolor: var(--theme-text);
 	min-height: 100vh;
 	line-height: 1.3;
 	margin-bottom: 5%;
@@ -320,9 +317,11 @@ a.download::before {
 
 
 
-table{font-size:100% !important;}
+table{font-size:100% !important; color: #222222;}
 
 I, EM	{ font-style: italic; color:#2D41E3 !important; }
+I.nwr	{ white-space: nowrap; }
+
 
 a {
 	text-decoration: none;
@@ -347,7 +346,7 @@ a:hover {
 }
 a:active  { color:#8B0000; }
 
-h1,h2,h3,h4,h5,h6{line-height:39px !important; font-weight:500 !important; letter-spacing: 1px;}
+h1,h2,h3,h4,h5,h6{line-height:39px !important; font-weight:500 !important; letter-spacing: 1px; color:#000050 !important;}
 h1{font-size:190% !important; text-align:center;}
 h2{text-align:left; font-size:170% !important; margin: 2em 0 1em 0;}
 h3{text-align:left; font-size:115% !important;margin: 1em 0 0.7em 0;}
@@ -391,6 +390,7 @@ a {
   transition: all .5s;
 }
 
+#wrap {margin:10; max-width: 350px !important; text-align: left; margin: 0 auto; /* задаем отступ слева и справа auto чтобы сработало выравнивание по центру */}
 </style>
 </head>
 <body>
@@ -398,9 +398,9 @@ a {
 
 <div class="als-content-wrap" data-als-search="wrapper">
 <div class="als-text-container">
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 style="font-size:140% !important; text-align:center; margin-top: 0em; font-weight:400 !important;">Johanna Nichols</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 style="font-size:140% !important; text-align:center; margin-top: 0em; font-weight:400 !important;">Джоанна Николс</h2>
 </td></tr></table>
 
@@ -412,8 +412,8 @@ a {
 
 
 
+<div Xid="wrap" style="font-size:85%;">
 
-<div style="font-size:85%;">
 <a href="#0">Сокращения и обозначения</a><br>
 <a href="#1">Appendix 1. Case paradigms of nouns</a><br>
 <dd><a href="#19">Singular declension classes</a></dd>
@@ -436,10 +436,9 @@ a {
 
 
 
-
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="0">Abbreviations and conventions</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="0">Сокращения и обозначения</h2>
 </td></tr></table>
 
@@ -524,18 +523,18 @@ a {
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="1">Appendix 1. Case paradigms of nouns</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="1z">Приложение 1. Падежные парадигмы существительных</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="2"><b>Noun declension.</b> Ingush nouns have eight regular cases marked by the endings shown below. Endings separated by a comma are more or less automatic alternants; a semicolon separates lexically determined differences of declension; a slash separates stylistic variants. (For the plural see <a href="#249">Appendix 2</a>.)</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="2"><b>Склонение существительных.</b> Ингушские существительные имеют восемь обычных падежей, обозначаемых окончаниями, показанными ниже. Окончания, разделенные запятой, являются более или менее автоматическими вариантами; точка с запятой отделяет лексически обусловленные различия в склонении; косая черта отделяет стилистические варианты. (О множественном числе см. <a href="#249z">Приложение 2</a>).</p>
 </td></tr></table>
 
@@ -555,67 +554,67 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="12">Where the stem ends in a consonant and the ending begins with a consonant, a buffer vowel <i>-a-</i> is inserted (e.g. <i>kuotam</i> 'chicken' plus allative <i>-ga</i>: <i>kuotam-aga</i>).</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="12">Where the stem ends in a consonant and the ending begins with a consonant, a buffer vowel <i class=nwr>a-</i> is inserted (e.g. <i>kuotam</i> 'chicken' plus allative <i class=nwr>ga</i>: <i>kuotam-aga</i>).</p>
+</td><td class=trl2>
 <p id="12">Если основа заканчивается на согласную, а окончание начинается с согласной, вставляется буферный гласный -a- (например, kuotam 'курица' плюс аллятив -ga: kuotam-aga).</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="13">The ergative singular allomorphs are distributed as follows, <i>-uo</i> is productive in normative usage and is added to any consonant-final stem, <i>-aa</i> is a conservative normative ending in declensions 5 and 6 (for declension numbers see below), often replaced even in normative usage by <i>-uo</i>. <i>-z</i> in normative usage is found only on a handful of kin terms and other nouns referring to humans; in contemporary colloquial usage it is productive, used especially on vowel-final nouns and animate nouns.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="13">The ergative singular allomorphs are distributed as follows, <i class=nwr>uo</i> is productive in normative usage and is added to any consonant-final stem, <i class=nwr>aa</i> is a conservative normative ending in declensions 5 and 6 (for declension numbers see below), often replaced even in normative usage by <i class=nwr>uo</i>. <i class=nwr>z</i> in normative usage is found only on a handful of kin terms and other nouns referring to humans; in contemporary colloquial usage it is productive, used especially on vowel-final nouns and animate nouns.</p>
+</td><td class=trl2>
 <p id="13">Алломорфы эргативного единственного числа распределяются следующим образом, -uo является продуктивным в нормативном употреблении и добавляется к любой согласной конечной основе, -aa является консервативным нормативным окончанием в склонениях 5 и 6 (номера склонений см. ниже), часто заменяется на -uo даже в нормативном употреблении. -Окончание -z в нормативном употреблении встречается только в некоторых родственных терминах и других существительных, относящихся к людям; в современном разговорном употреблении оно продуктивно, особенно в гласных окончаний существительных и одушевленных существительных.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="14">If the case endings show little variation and that rather straightforward, noun stems change considerably in the course of case inflection. The principal changes they make are <i>ablaut</i>, or change of the stem vowel in some or all oblique cases and/or in the plural, and addition of an <i>extension</i> or pre-case suffix in the oblique cases and/or the plural. Some nouns have both ablaut and extension. The changes made in the singular oblique stem are largely independent of those made in the plural stem, so plurals are described separately in <a href="#249">Appendix 2</a>.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="14">Если падежные окончания мало изменяются и это довольно просто, то основы существительных значительно изменяются в процессе падежного склонения. Основными изменениями являются аблаут, или изменение гласного в основе в некоторых или во всех косвенных падежах и/или во множественном числе, и добавление добавочного или предпадежного суффикса в косвенных падежах и/или во множественном числе. Некоторые существительные имеют и аблаут, и окончание. Изменения, вносимые в косую основу единственного числа, в значительной степени независимы от изменений, вносимых в основу множественного числа, поэтому множественное число описывается отдельно в <a href="#249z">Приложении 2</a>.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="15">In the table below, nouns are sorted into fifteen declension classes according to their kind of change. Dictionary entries show the numbered declension class of the noun, and where there are stem vowel changes an oblique case is also given.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="15">В приведенной ниже таблице существительные рассортированы по пятнадцати классам склонения в зависимости от вида изменения. В словарных статьях указывается нумерованный класс склонения существительного, а при изменении гласных в корне указывается также косвенный падеж.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="16">It should be noted that the classification given here is rather conservative, reflecting the literary language of the early to mid 20<sup>th</sup> century and the language of traditional folklore. For many nouns there is no clear norm, and different sources give different oblique and/or plural stems even for this conservative style. In everyday usage, variation is considerable. In addition, the declension classes are being simplified, with more and more nouns declining in the simple class 1. Perhaps most important, not all nouns are used frequently in all cases. Many nouns referring to inanimate objects are used mostly as objects of verbs and might best be regarded as compounding forms, bound nouns, or first elements of compounds.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="16">Следует отметить, что приведенная здесь классификация является довольно консервативной, отражая литературный язык начала-середины 20 века и язык традиционного фольклора. Для многих существительных не существует четкой нормы, и разные источники дают разные формы склонения и/или множественного числа даже для этого консервативного стиля. В повседневном употреблении вариации значительны. Кроме того, происходит упрощение классов склонения: все больше существительных склоняются по простому классу 1. Возможно, самое важное, что не все существительные часто используются во всех случаях. Многие существительные, обозначающие неодушевленные предметы, используются в основном как объекты глаголов и могут рассматриваться как составные формы, связанные существительные или первые элементы соединений.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="17">Despite these indeterminacies, declension classes of nouns are shown in the dictionary whenever possible. The tables below give the declension classes for the singular. There are four stem shapes of nouns relevant to describing declension: nouns that end in a consonant in the nominative singular (such as <i>kuotam</i> 'hen' or <i>buc</i> 'grass'), nouns that end in <i>-a</i> (and are disyllabic or longer, i.e. the <i>-a</i> is not the only vowel in the word; e.g. <i>maza</i> 'louse', <i>shura</i> 'milk'), nouns that end in a vowel other than <i>-a</i> (and this is not the only vowel; e.g. <i>dynie</i> 'world', <i>eattuo</i> 'success'), and monosyllabic vowel-final nouns (e.g. <i>cha</i> 'bear', <i>xii</i> 'water', <i>doa</i> 'wicker').</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="17">Despite these indeterminacies, declension classes of nouns are shown in the dictionary whenever possible. The tables below give the declension classes for the singular. There are four stem shapes of nouns relevant to describing declension: nouns that end in a consonant in the nominative singular (such as <i>kuotam</i> 'hen' or <i>buc</i> 'grass'), nouns that end in <i class=nwr>a</i> (and are disyllabic or longer, i.e. the <i class=nwr>a</i> is not the only vowel in the word; e.g. <i>maza</i> 'louse', <i>shura</i> 'milk'), nouns that end in a vowel other than <i class=nwr>a</i> (and this is not the only vowel; e.g. <i>dynie</i> 'world', <i>eattuo</i> 'success'), and monosyllabic vowel-final nouns (e.g. <i>cha</i> 'bear', <i>xii</i> 'water', <i>doa</i> 'wicker').</p>
+</td><td class=trl2>
 <p id="17">Несмотря на эти неопределенности, классы склонения существительных указываются в словаре по мере возможности. В таблицах ниже приведены классы склонения для единственного числа. Для описания склонения существительных существует четыре формы основы: существительные, которые оканчиваются на согласный в именительном падеже единственного числа (например, kuotam 'курица' или buc 'трава'), существительные, которые оканчиваются на -a (и являются дислабическими или более длинными, т.е. -a не является единственным гласным в слове; напр.например, maza 'вошь', shura 'молоко'), существительные, которые оканчиваются на гласный, отличный от -a (и это не единственный гласный; например, dynie 'мир', eattuo 'успех'), и односложные существительные с гласным окончанием (например, cha 'медведь', xii 'вода', doa 'плетень').</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="18">A declension class has been given in the dictionary entry when it was possible to check the noun with two or more speakers, or when one speaker agreed with a major published source. No declension class number is given for compounds (whose second element always declines the same as it does in isolation), for words suffixed in <i>-ig</i> / <i>-jg</i> (always Declension 1), for verbal nouns in <i>-ar</i> (Declension 1), and for words not checked with enough speakers. For the latter, it is safe to assume that nouns ending in <i>-a</i> follow Declension 5, those ending in a consonant follow Declension 1, and monosyllabic vowel-final nouns follow Declension 7.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="18">A declension class has been given in the dictionary entry when it was possible to check the noun with two or more speakers, or when one speaker agreed with a major published source. No declension class number is given for compounds (whose second element always declines the same as it does in isolation), for words suffixed in <i class=nwr>ig</i> / <i class=nwr>jg</i> (always Declension 1), for verbal nouns in <i class=nwr>ar</i> (Declension 1), and for words not checked with enough speakers. For the latter, it is safe to assume that nouns ending in <i class=nwr>a</i> follow Declension 5, those ending in a consonant follow Declension 1, and monosyllabic vowel-final nouns follow Declension 7.</p>
+</td><td class=trl2>
 <p id="18">Класс склонения был указан в словарной статье, когда была возможность проверить существительное с двумя или более дикторами, или когда один диктор согласился с основным опубликованным источником. Номер класса склонения не указывается для соединений (второй элемент которых всегда склоняется так же, как и изолированный), для слов с суффиксами -ig / -jg (всегда склонение 1), для отглагольных существительных на -ar (склонение 1) и для слов, не проверенных достаточным количеством говорящих. Для последних можно предположить, что существительные, оканчивающиеся на -a, относятся к склонению 5, оканчивающиеся на согласный — к склонению 1, а односложные существительные с гласным окончанием — к склонению 7.</p>
 </td></tr></table>
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h3 id="19">Singular declension classes.</h3>
-</td><td class=trl>
+</td><td class=trl2>
 <h3 id="19">Классы склонения единственного числа.</h3>
 </td></tr></table>
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="nic_1"><b>1. No change</b> in stem vowel, no extension. This declension is productive, with about 700 simple nouns and many derived ones in the dictionary.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="nic_1"><b>1. Без изменения</b> гласного в основе, без окончания. Это склонение продуктивно, в словаре около 700 простых существительных и много производных.</p>
 </td></tr></table>
 
@@ -635,9 +634,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="nic_2"><b>2. Shortened vowel in nominative</b>, corresponding long elsewhere. All such nouns are consonant-final. (Historically, this results from shortening of the stem vowel in a closed syllable. The nominative is the only form where the stem syllable is closed. Thus, historically, declension 2 is a variant of declension 1. The vowel alternation could almost be considered a type of ablaut, except that shortening is a regular phonological process.) There are under 200 such nouns in the dictionary.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="nic_2"><b>2. Краткий гласный в именительном падеже</b>, соответствующий долгий в других местах. Все такие существительные являются консонантно-финальными. (Исторически это происходит в результате укорочения основного гласного в закрытом слоге. Именительный падеж — единственная форма, где слог закрыт. Таким образом, исторически склонение 2 является вариантом склонения 1. Чередование гласных почти можно считать разновидностью аблаута, за исключением того, что укорочение — это обычный фонологический процесс). В словаре насчитывается около 200 таких существительных.</p>
 </td></tr></table>
 
@@ -657,9 +656,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="nic_3"><b>3. Ablaut</b> but no extension. All known ablaut patterns are shown here. Ablaut is unproductive; there are under 50 such nouns in the dictionary. The 13 nouns given here show all of the vowel alternations found. Most often the oblique cases have the vowel /e/ or /ea/. (In dictionary entries, the oblique case form cited shows what the alteration is. The vowel of the cited oblique case can be assumed to carry over to all oblique cases unless otherwise indicated.)</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="nic_3"><b>3. Аблаут</b>, но без окончания. Здесь показаны все известные модели аблаута. Аблаут непродуктивен; в словаре насчитывается менее 50 таких существительных. Приведенные здесь 13 существительных демонстрируют все найденные чередования гласных. Чаще всего косые падежи имеют гласный /e/ или /ea/. (В словарных статьях приведенная форма косого падежа показывает, в чем заключается изменение. Если не указано иное, можно предположить, что гласный данного косого падежа переносится на все косые падежи).</p>
 </td></tr></table>
 
@@ -719,9 +718,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="nic_3x"><b>3x. Partial ablaut.</b> Seven such nouns have been found: the following plus <i>jow</i> 'daughter' (which declines like <i>vow</i> 'son') and <i>nax/naax</i> 'people' (which declines like <i>maar).</i> In 'father' and 'God' the ergative case does not change its vowel. In the others, only the genitive case has a changed vowel.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="nic_3x"><b>3x. Частичный аблаут.</b> Было найдено семь таких существительных: следующие плюс jow 'дочь' (которое склоняется как vow 'сын') и nax/naax 'люди' (которое склоняется как maar). В словах "отец" и "Бог" эргативный падеж не меняет гласную. В остальных случаях только родительный падеж имеет измененный гласный.</p>
 </td></tr></table>
 
@@ -740,11 +739,11 @@ a {
 <tr id="95"><td class="b2" class="td1">Csn</td><td>deal</td><td>neanal</td><td>maaral</td><td>vowal</td><td>Dealal</td></tr>
 </table>
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <blockquote>
 <hr size=0><P id="96" class='snoska'><a name=bookmark1></a><sup><a href=#footnote1>1</a></sup> The dative ending of this word is unique. The dative form appears to be Chechen, which implies that the entire word has been taken over from Chechen.</p>
 </blockquote>
-</td><td class=trl>
+</td><td class=trl2>
 <blockquote>
 <hr size=0><P id="96" class='snoska'><a name=bookmark1></a><sup><a href=#footnote1>1</a></sup> Дательное окончание этого слова уникально. Дательная форма кажется чеченской, что подразумевает, что все слово было заимствовано из чеченского языка.</p>
 </blockquote>
@@ -753,9 +752,9 @@ a {
 
 
 
-<table class=prl><tr><td>
-<p id="nic_4"><b>4. Nouns with stem-final <i>-ii</i> or <i>-uu</i> in the nominative singular but <i>-ie</i> or <i>-uo</i> in the oblique cases.</b> Some speakers pronounce a true /uu/ in the nominative singular of words like 'silver' while others pronounce a vowel midway between /uu/ and /uo/ (technically an allophone of /uo/, but in a near-merger with /uu/ and usually not perceived as /uo/). In modem usage the ergative singular of nouns in <i>-ii</i> is quite likely to take <i>-z</i> (i.e. <i>zhwalez).</i> There are about 25 nouns of declension 4 in the dictionary.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_4"><b>4. Nouns with stem-final <i class=nwr>ii</i> or <i class=nwr>uu</i> in the nominative singular but <i class=nwr>ie</i> or <i class=nwr>uo</i> in the oblique cases.</b> Some speakers pronounce a true /uu/ in the nominative singular of words like 'silver' while others pronounce a vowel midway between /uu/ and /uo/ (technically an allophone of /uo/, but in a near-merger with /uu/ and usually not perceived as /uo/). In modem usage the ergative singular of nouns in <i class=nwr>ii</i> is quite likely to take <i class=nwr>z</i> (i.e. <i>zhwalez).</i> There are about 25 nouns of declension 4 in the dictionary.</p>
+</td><td class=trl2>
 <p id="nic_4"><b>4. Существительные с окончанием -ii или -uu в именительном падеже единственного числа, но -ie или -uo в косвенных падежах.</b> Некоторые носители произносят истинное /uu/ в именительном падеже единственного числа таких слов, как "серебро", в то время как другие произносят гласный звук, средний между /uu/ и /uo/ (технически это аллофон /uo/, но он почти сливается с /uu/ и обычно не воспринимается как /uo/). В современном употреблении эргативное единственное число существительных на -ii вполне может принимать -z (т.е. zhwalez). В словаре около 25 существительных 4-го склонения.</p>
 </td></tr></table>
 
@@ -775,9 +774,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_5"><b>5. <i>-aa-</i> / <i>-an-</i>.</b> Nouns with <i>-a</i> in nominative singular and <i>-an-</i> or <i>-aa-</i> extension in the oblique cases. Except for the most frequently used words, nouns of this declension are also likely to be delined as in declension 1. The lative and comparison cases are quite likely to lack the <i>-aa-</i> (though in normative usage they should always have it). The two italicized forms below are quite unlikely for the noun shown here, but are moderately likely for other nouns.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_5"><b>5. <i class=nwr>aa-</i> / <i class=nwr>an-</i>.</b> Nouns with <i class=nwr>a</i> in nominative singular and <i class=nwr>an-</i> or <i class=nwr>aa-</i> extension in the oblique cases. Except for the most frequently used words, nouns of this declension are also likely to be delined as in declension 1. The lative and comparison cases are quite likely to lack the <i class=nwr>aa-</i> (though in normative usage they should always have it). The two italicized forms below are quite unlikely for the noun shown here, but are moderately likely for other nouns.</p>
+</td><td class=trl2>
 <p id="nic_5"><b>5. -aa- / -an-.</b> Существительные с -a в именительном падеже единственного числа и -an- или -aa- в косвенных падежах. За исключением наиболее часто употребляемых слов, существительные этого склонения, скорее всего, будут склоняться также, как и в склонении 1. В дательном и сравнительном падежах вполне вероятно отсутствие -aa- (хотя в нормативном употреблении оно должно быть всегда). Две формы, выделенные курсивом ниже, весьма маловероятны для существительного, показанного здесь, но умеренно вероятны для других существительных.</p>
 </td></tr></table>
 
@@ -797,9 +796,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_6"><b>6. The same <i>-an-</i> or <i>-aa-</i> extension and ablaut.</b> There is only one such noun in this dictionary:</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_6"><b>6. The same <i class=nwr>an-</i> or <i class=nwr>aa-</i> extension and ablaut.</b> There is only one such noun in this dictionary:</p>
+</td><td class=trl2>
 <p id="nic_6"><b>6. То же -an- или -aa- окончание и аблаут.</b> В этом словаре есть только одно такое существительное:</p>
 </td></tr></table>
 
@@ -819,16 +818,16 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="127"><i>Hwoasa</i> 'filament' (erg. <i>hweasuo</i> in published sources) appears to belong to the same declension, though its forms have not been fully elicited.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="127">Hwoasa "нить" (эрг. hweasuo в опубликованных источниках), по-видимому, принадлежит к тому же склонению, хотя его формы до конца не выяснены.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="nic_7"><b>7. <i>-n-</i> extension.</b> Nouns ending in a vowel other than <i>-a</i>, and with <i>-n-</i> extension in all the oblique cases (though, again, in actual usage the <i>-n-</i> is often missing in the lative and comparative: forms such as <i>tq'ourogh</i> and <i>pxogh</i> are often to be heard).</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_7"><b>7. <i class=nwr>n-</i> extension.</b> Nouns ending in a vowel other than <i class=nwr>a</i>, and with <i class=nwr>n-</i> extension in all the oblique cases (though, again, in actual usage the <i class=nwr>n-</i> is often missing in the lative and comparative: forms such as <i>tq'ourogh</i> and <i>pxogh</i> are often to be heard).</p>
+</td><td class=trl2>
 <p id="nic_7"><b>7. окончание -n-.</b> Существительные, оканчивающиеся на гласную, отличную от -а, и с добавлением -н- во всех косвенных падежах (хотя, опять же, в реальном употреблении -н- часто отсутствует в лативе и компаративе: часто можно услышать такие формы, как tq'ourogh и pxogh).</p>
 </td></tr></table>
 
@@ -848,9 +847,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_8"><b>8. <i>-n-</i> extension and ablaut.</b> The following seven nouns show all of the vowel alternations attested for this declension.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_8"><b>8. <i class=nwr>n-</i> extension and ablaut.</b> The following seven nouns show all of the vowel alternations attested for this declension.</p>
+</td><td class=trl2>
 <p id="nic_8"><b>8. -n- окончание и аблаут.</b> Следующие семь существительных демонстрируют все чередования гласных, засвидетельствованные для этого склонения.</p>
 </td></tr></table>
 
@@ -880,18 +879,18 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="157">Other nouns that decline like 'day' are <i>xi</i> 'tree, log', <i>bwi</i> 'nest', and <i>wi</i> 'shadow'. Like 'light': <i>q'a</i> 'sin'. Like 'comer': <i>ga</i> 'tree', <i>pxa</i> 'vein', <i>xa</i> 'side of body, hip'. Like 'time': <i>gha</i> 'dream', <i>la</i> 'horseshoe', <i>ka</i> 'head of grain'.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="157">Другие существительные, которые склоняются как "день", это xi "дерево, бревно", bwi "гнездо" и wi "тень". Как 'свет': q'a 'грех'. Как "пришедший": ga "дерево", pxa "вена", xa "сторона тела, бедро". Как 'время': gha 'сон', la 'подкова', ka 'головка зерна'.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
-<p id="nic_9"><b>9. <i>-chu-</i> extension</b> (with regular phonological changes to <i>-chy-</i>, <i>-cho-</i>, etc.). There are two types: words referring to humans (including derivatives in <i>-xuo</i> and other suffixes, such as 'neighbor' here); and nominalized participles (such as 'truth' here, literally 'that which is true').</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_9"><b>9. <i class=nwr>chu-</i> extension</b> (with regular phonological changes to <i class=nwr>chy-</i>, <i class=nwr>cho-</i>, etc.). There are two types: words referring to humans (including derivatives in <i class=nwr>xuo</i> and other suffixes, such as 'neighbor' here); and nominalized participles (such as 'truth' here, literally 'that which is true').</p>
+</td><td class=trl2>
 <p id="nic_9"><b>9. Окончание -chu-</b> (с регулярными фонологическими изменениями на -чи-, -чо- и т.д.). Существует два типа: слова, относящиеся к людям (включая производные на -xuo и другие суффиксы, такие как "сосед" здесь); и номинализированные причастия (такие как "правда" здесь, буквально "то, что правда").</p>
 </td></tr></table>
 
@@ -911,9 +910,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_10"><b>10. <i>-ar-</i> extension and no ablaut.</b> Others: <i>lol</i> 'loop', <i>mugh</i> 'row', <i>muq</i> 'pocket knife', <i>boxk</i> 'bellyband (of saddle)’ <i>nab / naab</i> 'sleep', a total of six such nouns in the dictionary.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_10"><b>10. <i class=nwr>ar-</i> extension and no ablaut.</b> Others: <i>lol</i> 'loop', <i>mugh</i> 'row', <i>muq</i> 'pocket knife', <i>boxk</i> 'bellyband (of saddle)’ <i>nab / naab</i> 'sleep', a total of six such nouns in the dictionary.</p>
+</td><td class=trl2>
 <p id="nic_10"><b>10. окончание -ar- и отсутствие аблаута.</b> Другие: lol 'петля', mugh 'ряд', muq 'карманный нож', boxk 'ремни (седла)' nab / naab 'сон', всего в словаре шесть таких существительных.</p>
 </td></tr></table>
 
@@ -933,9 +932,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_11"><b>11. <i>-ar-</i> extension and ablaut.</b> There are 25 such nouns in the dictionary. The following nouns show all the attested vowel alternations.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_11"><b>11. <i class=nwr>ar-</i> extension and ablaut.</b> There are 25 such nouns in the dictionary. The following nouns show all the attested vowel alternations.</p>
+</td><td class=trl2>
 <p id="nic_11"><b>11. -ar- окончание и аблаут.</b> В словаре 25 таких существительных. Следующие существительные показывают все засвидетельствованные чередования гласных.</p>
 </td></tr></table>
 
@@ -965,16 +964,16 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="197">Another noun that declines like 'axe' is <i>niq</i> 'hive'. Nouns that decline like 'sand' are <i>nux</i> 'plow' and <i>turn</i> 'corncob; nut meat'. Like 'skin': <i>niw</i> 'door', <i>shim</i> 'udder', <i>zhim</i> 'kidney', <i>lich</i> 'flake', <i>zwim</i> 'threshing tool'. Like 'broom': <i>ghuu</i> 'bar, bolt'. Like 'lard': <i>muhw</i> 'shout'. Like 'windrow': <i>k'edzh</i> 'braid'.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="197">Еще одно существительное, которое склоняется так же, как "топор", — niq "улей". Существительные, которые склоняются как "песок", — это nux "плуг" и turn "початок кукурузы; мясо ореха". Как 'кожа': niw 'дверь', shim 'вымя', zhim 'почка', lich 'чешуя', zwim 'молотильный инструмент'. Как 'метла': ghuu 'прут, болт'. Как "сало": muhw "кричать". Как "валок": k'edzh "коса".</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="nic_12"><b>12. <i>-nar-</i> extension and ablaut.</b> There are two such words in the dictionary.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_12"><b>12. <i class=nwr>nar-</i> extension and ablaut.</b> There are two such words in the dictionary.</p>
+</td><td class=trl2>
 <p id="nic_12"><b>12. -nar- окончание и аблаут.</b> В словаре есть два таких слова.</p>
 </td></tr></table>
 
@@ -994,9 +993,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_13"><b>13. <i>-ii-</i> extension</b> (alternating regularly with <i>-e-</i> in closed syllables). All such nouns have <i>-a</i> in the nominative singular. Only two nouns regularly take <i>-ii-</i> throughout the paradigm for all speakers: 'sister' and 'brother' (the latter also has ablaut):</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_13"><b>13. <i class=nwr>ii-</i> extension</b> (alternating regularly with <i class=nwr>e-</i> in closed syllables). All such nouns have <i class=nwr>a</i> in the nominative singular. Only two nouns regularly take <i class=nwr>ii-</i> throughout the paradigm for all speakers: 'sister' and 'brother' (the latter also has ablaut):</p>
+</td><td class=trl2>
 <p id="nic_13"><b>13. окончание -ii-</b> (регулярно чередуется с -e- в закрытых слогах). Все такие существительные имеют -a в именительном падеже единственного числа. Только два существительных регулярно принимают -ii- в парадигме для всех носителей: 'сестра' и 'брат' (последнее также имеет аблаут):</p>
 </td></tr></table>
 
@@ -1016,9 +1015,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="218">For all other nouns of this declension, endings of declension 5 are quite likely to appear in contemporary usage. Different speakers have different propensities to use endings of declension 13 with one or another case: some speakers regularly use the declension 13 ending <i>-iica</i> in the instrumental, others regularly use declension 13 <i>-iiga</i> in the allative, and so on. The ergative is quite variable; dictionaries give forms in <i>-uo</i>, <i>-ievuo</i>, <i>-ieva</i>, and <i>-aa</i>, and <i>-iiv</i> has also been elicited.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="218">For all other nouns of this declension, endings of declension 5 are quite likely to appear in contemporary usage. Different speakers have different propensities to use endings of declension 13 with one or another case: some speakers regularly use the declension 13 ending <i class=nwr>iica</i> in the instrumental, others regularly use declension 13 <i class=nwr>iiga</i> in the allative, and so on. The ergative is quite variable; dictionaries give forms in <i class=nwr>uo</i>, <i class=nwr>ievuo</i>, <i class=nwr>ieva</i>, and <i class=nwr>aa</i>, and <i class=nwr>iiv</i> has also been elicited.</p>
+</td><td class=trl2>
 <p id="218">Для всех остальных существительных этого склонения в современном употреблении вполне вероятно появление окончаний склонения 5. Разные носители имеют разную склонность к использованию окончаний склонения 13 с тем или иным падежом: одни носители регулярно используют окончание склонения 13 -iica в инструментальном, другие — -iiga в аллативном и так далее. Эргатив весьма вариативен; словари дают формы на -uo, -ievuo, -ieva, и -aa, а также -iiv.</p>
 </td></tr></table>
 
@@ -1038,9 +1037,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="nic_14"><b>14. <i>-m</i> extension.</b> There is one noun with this extension.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="nic_14"><b>14. <i class=nwr>m</i> extension.</b> There is one noun with this extension.</p>
+</td><td class=trl2>
 <p id="nic_14"><b>14. Окончание -m.</b> Существует одно существительное с этим окончанием.</p>
 </td></tr></table>
 
@@ -1060,9 +1059,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="nic_15"><b>15. Initial <i>j-</i> drop.</b> Eight nouns have initial <i>j-</i> in the nominative singular which is lost (with ablaut) in the other forms. (All but one belong to J gender, so this is a genderechoing formative. The exception is <i>jett</i> B 'cow'.)</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="nic_15"><b>15. Утрата начального j-.</b> Восемь существительных имеют начальное j- в именительном падеже единственного числа, которое утрачивается (с аблаутом) в других формах. (Все существительные, кроме одного, принадлежат к роду J, так что это форматив, относящийся к роду. Исключение составляет jett B 'корова').</p>
 </td></tr></table>
 
@@ -1082,27 +1081,27 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="248">The others are <i>jol</i>, gen. <i>eala</i> 'hay'; <i>jexk, axkara</i> 'comb'; <i>jis, aasara</i> 'frost'; <i>jost, aastara</i> 'dust'; <i>juu, oura</i> 'awl'; <i>joq'</i>, <i>ouq'ara (wouq'ara)</i> 'ashes'.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="248">Другие: jol, род. п. eala "сено"; jexk, axkara "гребень"; jis, aasara "иней"; jost, aastara "пыль"; juu, oura "шило"; joq', ouq'ara (wouq'ara) "пепел".</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="249">Appendix 2. Plurals of nouns</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="249z">Приложение 2. Множественное число существительных</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="250">Since the plural stem is often not predictable from the singular stem and is more stable and more frequently used than the singular oblique cases, it is cited as a principal part in lexical entries. Plural oblique cases are always regular. Some nouns have no plural: mass nouns (e.g. <i>borc</i> 'millet', <i>zhuur</i> 'com meal', <i>buolat</i> 'Damascus steel'), abstract nouns (<i>dienal</i> 'courage', <i>berkat</i> 'abundance'), and unique nouns (<i>q'ylbasieda</i> 'north star, polar star', <i>maalx</i> 'sun'). Plural declension is as follows. (Numerals show the declension class the noun belongs to in the singular.)</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="250">Поскольку основа множественного числа часто не предсказуема по сравнению с основой единственного числа и является более устойчивой и часто употребляемой, чем косые падежи единственного числа, она приводится в качестве основной части в лексических статьях. Косые падежи множественного числа всегда регулярны. Некоторые существительные не имеют множественного числа: массовые существительные (например, borc 'просо', zhuur 'мука', buolat 'дамасская сталь'), абстрактные существительные (dienal 'мужество', berkat 'изобилие') и уникальные существительные (q'ylbasieda 'северная звезда, полярная звезда', maalx 'солнце'). Склонение множественного числа следующее. (Цифры показывают класс склонения, к которому относится существительное в единственном числе).</p>
 </td></tr></table>
 
@@ -1135,9 +1134,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="269">The plural formative <i>-zh-</i> is spelled 'sh' in the normative Cyrillic orthography and often so pronounced as a spelling pronunciation. Also in the normative spelling, the ergative plural has an ending <i>-a</i> which (in normative or spelling pronunciation) opens a preceding syllable and allows a preceding vowel to be long:</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="269">The plural formative <i class=nwr>zh-</i> is spelled 'sh' in the normative Cyrillic orthography and often so pronounced as a spelling pronunciation. Also in the normative spelling, the ergative plural has an ending <i class=nwr>a</i> which (in normative or spelling pronunciation) opens a preceding syllable and allows a preceding vowel to be long:</p>
+</td><td class=trl2>
 <p id="269">Формант множественного числа -ж- в нормативной кириллической орфографии пишется как "ш" и часто так произносится в орфографическом произношении. Также в нормативном написании эргативный множественного числа имеет окончание -а, которое (в нормативном или орфографическом произношении) открывает предшествующий слог и позволяет предшествующей гласной быть долгой:</p>
 </td></tr></table>
 
@@ -1150,9 +1149,9 @@ a {
 <tr id="273"><td>Spelling pronunciation:</td><td>leattaasha</td><td>loalaxuosha</td><td>kuortuosha</td></tr>
 </table>
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="274">The disyllabic lative and comparison cases also have a monosyllabic pronunciation:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="274">Дисиллабические дательный и сравнительный падежи также имеют моносиллабическое произношение:</p>
 </td></tr></table>
 
@@ -1165,18 +1164,18 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="277">The inventory of nominative plural endings is as follows.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="277">Список окончаний именительного падежа множественного числа выглядит следующим образом.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="278"><b>-zh</b> Productive; thousands of nouns take this ending. This is an extension, followed by case suffixes. The vowel that precedes it is determined by the stem:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="278"><b>-zh</b> Продуктивный; тысячи существительных имеют это окончание. Это окончание, за которым следуют падежные суффиксы. Гласная, которая предшествует ему, определяется основой:</p>
 </td></tr></table>
 
@@ -1185,42 +1184,42 @@ a {
 
 <table border="1">
 <tr id="279" valign=top><td class="td1">-azh</td><td>with buffer vowel, added to consonant-final stems (like <i>kuotam</i>, above)</td></tr>
-<tr id="280" valign=top><td class="td1">-ezh</td><td>nouns with stem-final <i>-ie-</i>, e.g. <i>zhwalii</i> 'dog', Esg <i>zhwalie</i>, Npl <i>zhwalezh</i></td></tr>
-<tr id="281" valign=top><td class="td1">-ozh</td><td>nouns with stem-final <i>-uo-</i>, e.g. <i>porduu</i> 'interface', Esg <i>porduo</i>, Npl <i>pordozh</i></td></tr>
+<tr id="280" valign=top><td class="td1">-ezh</td><td>nouns with stem-final <i class=nwr>ie-</i>, e.g. <i>zhwalii</i> 'dog', Esg <i>zhwalie</i>, Npl <i>zhwalezh</i></td></tr>
+<tr id="281" valign=top><td class="td1">-ozh</td><td>nouns with stem-final <i class=nwr>uo-</i>, e.g. <i>porduu</i> 'interface', Esg <i>porduo</i>, Npl <i>pordozh</i></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
-<p id="282"><b>-aazh</b> (i.e. extension <i>-aa-</i> plus plural extension <i>-zh</i>) Hundreds. In normative descriptions nearly all nouns of declension 5 take this ending (though in fact <i>-azh</i> is also frequent on such nouns in actual usage).</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="282"><b>-aazh</b> (i.e. extension <i class=nwr>aa-</i> plus plural extension <i class=nwr>zh</i>) Hundreds. In normative descriptions nearly all nouns of declension 5 take this ending (though in fact <i class=nwr>azh</i> is also frequent on such nouns in actual usage).</p>
+</td><td class=trl2>
 <p id="282"><b>-aazh</b> (т.е. окончание -аа- плюс окончание множественного числа -ж) Сотни. В нормативных описаниях почти все существительные 5-го склонения принимают это окончание (хотя в реальном употреблении -аж также часто встречается у таких существительных).</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="283"><b>-ii</b> About 100 nouns, most of them animate and most of them belonging to declensions 1, 3, and 5 in the singular, take this ending. Unproductive.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="283"><b>-ii</b> Около 100 существительных, большинство из которых одушевленные и большинство из них относятся к склонениям 1, 3 и 5 в единственном числе, имеют это окончание. Непродуктивное.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="284"><b>-oi</b> Nouns with the derivational suffix <i>-xuo</i> and nouns with plural extension <i>-uo-.</i> This plural extension is unproductive (and where it occurs it more often takes the nominative ending <i>-zh</i>: see 'head', below), though the derivational suffix <i>-xuo</i> is productive. Example <i>maar</i> 'husband', Gsg <i>meara</i>, Dsg <i>maaraa</i>, etc. (no <i>-uo-</i> extension); pl. <i>moaroi</i>, Dpi <i>moarozhta</i>, etc.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="284"><b>-oi</b> Nouns with the derivational suffix <i class=nwr>xuo</i> and nouns with plural extension <i class=nwr>uo-.</i> This plural extension is unproductive (and where it occurs it more often takes the nominative ending <i class=nwr>zh</i>: see 'head', below), though the derivational suffix <i class=nwr>xuo</i> is productive. Example <i>maar</i> 'husband', Gsg <i>meara</i>, Dsg <i>maaraa</i>, etc. (no <i class=nwr>uo-</i> extension); pl. <i>moaroi</i>, Dpi <i>moarozhta</i>, etc.</p>
+</td><td class=trl2>
 <p id="284"><b>-oi</b> Существительные с производным суффиксом -xuo и существительные с окончанием множественного числа -uo-. Это окончание множественного числа непродуктивно (и там, где оно встречается, оно чаще принимает номинативное окончание -zh: см. "голова", ниже), хотя производный суффикс -xuo продуктивен. Пример maar 'муж', Gsg meara, Dsg maaraa и т.д. (без окончания -uo-); pl. moaroi, Dpi moarozhta и т.д.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="285"><b>-ozh</b> (i.e. extension <i>-uo-</i> plus ending <i>-zh</i>) The sequence <i>-ozh</i> occurs when nouns ending in <i>-uo</i> take the plural extension <i>-zh</i> (e.g. <i>tq'ouruo</i> 'root', pl. <i>tq'ourozh</i>), but also when nouns not ending in <i>-uo</i> take the extension <i>-uo-</i> in the plural only. Example: 'head' in the table above.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="285"><b>-ozh</b> (i.e. extension <i class=nwr>uo-</i> plus ending <i class=nwr>zh</i>) The sequence <i class=nwr>ozh</i> occurs when nouns ending in <i class=nwr>uo</i> take the plural extension <i class=nwr>zh</i> (e.g. <i>tq'ouruo</i> 'root', pl. <i>tq'ourozh</i>), but also when nouns not ending in <i class=nwr>uo</i> take the extension <i class=nwr>uo-</i> in the plural only. Example: 'head' in the table above.</p>
+</td><td class=trl2>
 <p id="285"><b>-ozh</b> (т.е. окончание -uo- плюс окончание -zh) Последовательность -ozh встречается, когда существительные, оканчивающиеся на -uo, принимают во множественном числе окончание -zh (например, tq'ouruo 'корень', pl. tq'ourozh), а также когда существительные, не оканчивающиеся на -uo, принимают окончание -uo- только во множественном числе. Пример: "голова" в таблице выше.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="286"><b>-rch</b> This is actually an extension. About three dozen nouns take this extender. They include a number of animal names:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="286"><b>-rch</b> На самом деле это окончание. Около трех десятков существительных используют это окончание. В их число входит ряд названий животных:</p>
 </td></tr></table>
 
@@ -1240,27 +1239,27 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
-<p id="296"><b>-amazh</b> (i.e. extension <i>-am</i> plus plural extensin <i>-azh</i>) About three dozen nouns add this extension: e.g. <i>besh</i> 'garden', Dsg <i>bieshaa</i>; pl. <i>bieshamazh; koch</i> 'shirt, dress', Gsg <i>kuocha</i>, pl. <i>kuochamazh.</i> (The sequence <i>-amazh</i> also occurs when a noun ending in <i>-am</i> takes the regular plural extension <i>-zh</i>, e.g. <i>q'oalam</i> 'pencil', Npl <i>q'oalamazh</i>. <i>-am</i> is a productive suffix forming deverbal nouns, so there are many such nouns.)</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="296"><b>-amazh</b> (i.e. extension <i class=nwr>am</i> plus plural extensin <i class=nwr>azh</i>) About three dozen nouns add this extension: e.g. <i>besh</i> 'garden', Dsg <i>bieshaa</i>; pl. <i>bieshamazh; koch</i> 'shirt, dress', Gsg <i>kuocha</i>, pl. <i>kuochamazh.</i> (The sequence <i class=nwr>amazh</i> also occurs when a noun ending in <i class=nwr>am</i> takes the regular plural extension <i class=nwr>zh</i>, e.g. <i>q'oalam</i> 'pencil', Npl <i>q'oalamazh</i>. <i class=nwr>am</i> is a productive suffix forming deverbal nouns, so there are many such nouns.)</p>
+</td><td class=trl2>
 <p id="296"><b>-amazh</b> Около трех десятков существительных добавляют это окончание: например, besh 'сад', Dsg bieshaa; pl. bieshamazh; koch 'рубашка, платье', Gsg kuocha, pl. kuochamazh. (Последовательность -amazh также встречается, когда существительное, оканчивающееся на -am, приобретает обычное окончание множественного числа -zh, например, q'oalam 'карандаш', Npl q'oalamazh. Суффикс -am является продуктивным суффиксом, образующим девербальные существительные, поэтому таких существительных много).</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="297">Appendix 3. Personal pronouns and selected others</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="297z">Приложение 3. Личные местоимения и некоторые другие</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="298">Personal pronouns take the same case endings as nouns, but with some different stem changes. The inclusive means 'you and I' or 'you and we', including both speaker and hearer in its reference; the exclusive excludes the hearer and means 'we (but not you)'. The third person pronouns are properly demonstrative pronouns (see <a href="#514">Appendix 6</a>).</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="298">Личные местоимения имеют те же падежные окончания, что и существительные, но с некоторыми изменениями в корне. Инклюзивное местоимение означает "ты и я" или "ты и мы", включая в себя как говорящего, так и слушающего; эксклюзивное исключает слушающего и означает "мы (но не ты)". Местоимения третьего лица являются демонстративными местоимениями (см. <a href="#514z">Приложение 6</a>).</p>
 </td></tr></table>
 
@@ -1288,9 +1287,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="315">Each personal pronoun has its own reflexive pronoun, e.g.:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="315">Каждое личное местоимение имеет свое возвратное местоимение, например:</p>
 </td></tr></table>
 
@@ -1309,9 +1308,9 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="324">The interrogative pronouns have similar endings to the others, but distinctive suppletive stems.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="324">Вопросительные местоимения имеют такие же окончания, как и остальные, но отличительные супплетивные основы.</p>
 </td></tr></table>
 
@@ -1330,29 +1329,29 @@ a {
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="333">Appendix 4. Verb conjugation</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="333z">Приложение 4. Спряжение глаголов</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="334">Verbs have almost no differences of inflectional endings but show regular ablaut of stem vowels. The regular verbs fall into 16 ablaut classes, shown by Roman numerals in entries for underived verbs in the Ingush-English dictionary. There are three ablaut grades or stem forms: the infinitive stem (used in infinitive, verbal noun, and negative forms), the present stem (used in present, imperfect, and future tenses and converbs), and the past stem (used in the witnessed and non-witnessed past tenses, the pluperfect, and anterior converbs).<a name="footnote2"></a><sup><a href="#bookmark2">2</a></sup></td></p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="334">Глаголы почти не имеют различий в окончаниях, но демонстрируют регулярное аблаут стеблевых гласных. Регулярные глаголы делятся на 16 классов аблаута, обозначенных римскими цифрами в статьях о производных глаголах в ингушско-английском словаре. Существует три класса аблаута или формы основы: инфинитивная основа (используется в инфинитиве, отглагольных существительных и отрицательных формах), настоящая основа (используется в настоящем, несовершенном и будущем времени и конвербах) и прошедшая основа (используется в засвидетельствованном и несвидетельствованном прошедшем времени, плюсквамперфекте и передних конвербах)<a name="footnote2"></a><sup><a href="#bookmark2">2</a></sup>.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <blockquote>
 <hr size=0><P id="335" class='snoska'><sup><a href=#footnote2>2<a name=bookmark2></a></sup> The system of verb conjugation is based on Zev J. Handel, 'Ingush inflectional verb morphology.' Dee Ann Holisky and Kevin Tuite, eds., <i>Current Trends in Caucasian, East European, and Inner Asian linguistics: Papers in Honor of Howard I. Aronson.</i> Philadelphia: Benjamins, 2003, where <i>a more</i> abstract linguistic analysis is given and fewer classes are set up.</p>
 </blockquote>
-</td><td class=trl>
+</td><td class=trl2>
 <blockquote>
 <hr size=0><P id="335" class='snoska'><sup><a href=#footnote2>2<a name=bookmark2></a></sup> Система спряжения глаголов основана на Zev J. Handel, "Ingush inflectional verb morphology. Dee Ann Holisky and Kevin Tuite, eds., Current Trends in Caucasian, East European, and Inner Asian linguistics: Papers in Honor of Howard I. Aronson. Philadelphia: Benjamins, 2003, где дается более абстрактный лингвистический анализ и устанавливается меньшее количество классов.</p>
 </blockquote>
@@ -1361,9 +1360,9 @@ a {
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h3 id="336">Regular verb classes</h3>
-</td><td class=trl>
+</td><td class=trl2>
 <h3 id="336">Классы правильных глаголов</h3>
 </td></tr></table>
 
@@ -1392,18 +1391,18 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="354">The last four of these conjugation types have only a few members each, but are nonetheless regular. There are also ten irregular verbs, most of them with suppletive stems in one or the other tense series.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="354">Последние четыре из этих типов спряжения имеют всего по несколько членов, но, тем не менее, являются регулярными. Есть также десять неправильных глаголов, большинство из которых имеют супплетивные основы в том или ином временном ряду.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h3 id="355">Irregular verbs</h3>
-</td><td class=trl>
+</td><td class=trl2>
 <h3 id="355">Неправильные глаголы</h3>
 </td></tr></table>
 
@@ -1424,11 +1423,11 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <blockquote>
 <hr size=0><P id="367" class='snoska'><a name=bookmark3></a><sup><a href=#footnote3>3</a></sup> There are two verbs 'be': this one, a defective verb with only present stem forms, and the regular verb <i>xalar</i> (present <i>xul</i>) which is iterative or inceptive in aspect and can often be glossed 'become'. The standard convention (followed in the dictionary) is to use the verbal noun <i>xalar/хилар</i> or infinitive <i>xala/хила</i> as citation form for both.</p>
 </blockquote>
-</td><td class=trl>
+</td><td class=trl2>
 <blockquote>
 <hr size=0><P id="367" class='snoska'><a name=bookmark3></a><sup><a href=#footnote3>3</a></sup> Существует два глагола "быть": этот — дефектный глагол, имеющий только формы настоящего времени, и обычный глагол xalar (настоящее время xul), который является итеративным или инцептивным в аспекте и часто может быть переведен как "становиться". Стандартная конвенция (которой следует словарь) заключается в использовании отглагольного существительного xalar/хилар или инфинитива xala/хила в качестве формы цитирования для обоих глаголов.</p>
 </blockquote>
@@ -1437,16 +1436,16 @@ converb</u></td></tr>
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h3 id="368">Singular and plural of verbs.</h3>
-</td><td class=trl>
+</td><td class=trl2>
 <h3 id="368">Единственное и множественное число глаголов.</h3>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
-<p id="369">A few verbs undergo stem changes in agreement with the number of the subject (for intransitive verbs) or direct object (for transitive verbs). Verbs marked as plural in dictionary entries (pl.) are plurals of this type. The verb pairs in this dictionary that distinguish number are shown below. The main formations are suppletion, ablaut of stem vowel, and change of stem-final consonant to <i>-xk-.</i> Only simple stems are given here (some are attested mostly with prefixes). Two plurals correspond to <i>ull</i> 'lie': <i>d.aada</i> (progressive, most often with animate subject) and <i>uxk</i> (stative, often with inanimate). The two forms corresponding to <i>xou</i> 'sit' are variants; some speakers prefer one, some the other. In the table below, <i>Noun</i> = verbal noun and <i>Converb</i> = anterior converb.</p>
-</td><td class=trl>
+<table class=prl><tr><td class=trl1>
+<p id="369">A few verbs undergo stem changes in agreement with the number of the subject (for intransitive verbs) or direct object (for transitive verbs). Verbs marked as plural in dictionary entries (pl.) are plurals of this type. The verb pairs in this dictionary that distinguish number are shown below. The main formations are suppletion, ablaut of stem vowel, and change of stem-final consonant to <i class=nwr>xk-.</i> Only simple stems are given here (some are attested mostly with prefixes). Two plurals correspond to <i>ull</i> 'lie': <i>d.aada</i> (progressive, most often with animate subject) and <i>uxk</i> (stative, often with inanimate). The two forms corresponding to <i>xou</i> 'sit' are variants; some speakers prefer one, some the other. In the table below, <i>Noun</i> = verbal noun and <i>Converb</i> = anterior converb.</p>
+</td><td class=trl2>
 <p id="369">Некоторые глаголы изменяются в зависимости от числа субъекта (для интранзитивных глаголов) или прямого объекта (для переходных глаголов). Глаголы, отмеченные в словарных статьях как множественное число (pl.), являются множественными глаголами этого типа. Ниже приведены пары глаголов в данном словаре, различающие число. Основными формами являются супплетив, аблаут стеблевого гласного и изменение стеблевого конечного согласного на -xk-. Здесь приведены только простые основы (некоторые засвидетельствованы в основном с префиксами). Два множественных числа соответствуют ull 'лежать': d.aada (прогрессивное, чаще всего с одушевленным предметом) и uxk (стативное, часто с неодушевленным). Две формы, соответствующие xou 'сидеть', являются вариантами; некоторые носители предпочитают одну, некоторые — другую. В приведенной ниже таблице существительное = отглагольное существительное, а конверб = передний конверб.</p>
 </td></tr></table>
 
@@ -1481,17 +1480,17 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h3 id="394">Simulfactive and iterative of verbs.</h3>
-</td><td class=trl>
+</td><td class=trl2>
 <h3 id="394">Симультанность и итеративность глаголов.</h3>
 </td></tr></table>
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="395">Many verbs distinguish simulfactive (single action) from iterative (multiple action), usually by changing the stem vowel to <i>ie</i> (<i>e</i> in closed syllable) but occasionally by other changes or by suppletion. There are a few unpaired iteratives, which have no obvious corresponding simulfactive. The known iterative simple verbs in the dictionary are listed below, with their corresponding simulfactives. In the table below <i>Noun =</i> verbal noun and <i>Converb =</i> anterior converb.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="395">Многие глаголы отличают симультативные (однократного действия) от итеративных (многократного действия), обычно путем изменения основного гласного на ie (e в закрытом слоге), но иногда с помощью других изменений или супплетива. Существует несколько непарных итеративов, у которых нет очевидного соответствующего симультатива. Ниже перечислены известные в словаре итеративные простые глаголы с соответствующими симультативами. В таблице ниже Noun = отглагольное существительное и Converb = передний конверб.</p>
 </td></tr></table>
 
@@ -1575,42 +1574,42 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="469">The last-mentioned unpaired iterative has begun to form a corresponding phrasal simulfactive: <i>sardam baaqqar</i> 'curse (once)'. There are probably more such sets.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="469">Последний из упомянутых непарных итеративов начал формировать соответствующий фразовый симулякр: sardam baaqqar 'проклятие (один раз)'. Вероятно, таких наборов больше.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="470">Appendix 5. Auxiliary verbs and suffixed verbs</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="470z">Приложение 5. Вспомогательные глаголы и суффиксальные глаголы</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h3 id="471">Simple, compound, and phrasal verbs.</h3>
-</td><td class=trl>
+</td><td class=trl2>
 <h3 id="471">Простые, составные и фразовые глаголы.</h3>
 </td></tr></table>
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="472">Simple verb roots are a closed class in Ingush; counting all aspect and number variants they number about 400. The majority of the predicates in the lexicon are compound or phrasal. Both consist of a nominal or nonfinite element followed by a conjugated auxiliary; the auxiliary is suffixed in compounds and is a postposed separate word in phrasal verbs. Examples: <i>xaattar dar</i> 'ask' (lit. 'make a question'), <i>bustam baaqqar</i> 'measure' (lit. 'take measurement'), <i>tilifon tuoxar</i> 'call on the phone' (lit. 'strike with telephone'), <i>carjg tuoxar</i> 'bite' (lit. 'strike with tooth'), <i>nab jar</i> 'sleep' (lit. 'do sleeping'), <i>cecd.aalar</i> 'be surprised' (lit. 'go surprise'), <i>dagalaacar</i> 'memorize' (lit. 'catch to heart'), etc. Some of these compounds are usually written as one word in Ingushetia, and some as two; for many, the question is still open. In general, the more noun-like the first element the greater the tendency to write the compound as two words, as in the first few examples just above, where the elements <i>xaattar</i> 'question', <i>bustam</i> 'pattern, measurement', and <i>carjg</i> 'tooth' are also independent nouns in Ingush and assign gender to the second part. In <i>cecd.aalar</i> 'be surprised', the first element is not a noun and the gender agreement is with the subject and not with the first element. The practice for this dictionary has been to write a compounds or phrasal verb as one word if any standard Ingush source writes it that way.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="472">Простые глагольные корни представляют собой закрытый класс в ингушском языке; считая все аспектные и числовые варианты, их насчитывается около 400. Большинство предикатов в лексиконе являются составными или фразовыми. И те и другие состоят из именного или нефинитного элемента, за которым следует спрягаемый вспомогательный элемент; в составных глаголах вспомогательный элемент имеет суффикс, а во фразовых глаголах является постпозитивным отдельным словом. Примеры: xaattar dar 'спросить' (букв. 'задать вопрос'), bustam baaqqar 'измерить' (букв. 'сделать замер'), tilifon tuoxar 'позвонить по телефону' (букв. 'ударить по телефону'), carjg tuoxar 'укусить' (букв. 'ударить зубом'), nab jar 'спать' (лит. 'спать'), cecd.aalar 'удивляться' (лит. 'удивляться'), dagalaacar 'запоминать' (лит. 'заучивать наизусть') и т.д. Некоторые из этих соединений в Ингушетии обычно пишутся как одно слово, некоторые — как два; для многих вопрос остается открытым. В целом, чем более существительным является первый элемент, тем больше тенденция писать соединение как два слова, как в первых нескольких примерах, приведенных выше, где элементы xaattar 'вопрос', bustam 'образец, измерение' и carjg 'зуб' также являются самостоятельными существительными в ингушском языке и передают род второй части. В cecd.aalar 'удивиться' первый элемент не является существительным, и согласование по полу происходит с субъектом, а не с первым элементом. В данном словаре принято писать составной или фразовый глагол как одно слово, если в любом стандартном ингушском источнике он написан именно так.</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="473">The most frequent suffixal and auxiliary elements, in order, are:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="473">Наиболее часто встречающимися суффиксальными и вспомогательными элементами, в порядке убывания, являются:</p>
 </td></tr></table>
 
@@ -1632,9 +1631,9 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="485">Examples of paired intransitive and transitive verbs derived from nominal and adjectival bases are:</td></p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="485">Примерами парных интранзитивных и переходных глаголов, образованных от именных и адъективных основ, являются:</p>
 </td></tr></table>
 
@@ -1648,9 +1647,9 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="489">Examples of plain and suffixed verb stems:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="489">Примеры простых и суффиксальных глагольных основ:</p>
 </td></tr></table>
 
@@ -1669,9 +1668,9 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="498">Examples of compound and phrasal verbs:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="498">Примеры составных и фразовых глаголов:</p>
 </td></tr></table>
 
@@ -1696,27 +1695,27 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="513">The common intransitive auxiliaries <i>d.alar</i> and <i>d.aalar</i> are perfective and often inchoative. Transitives paired with verbs in one of these are likely to also be inchoative, but otherwise tne transitive auxiliaries have no particular aspectual effect. Verbs formed with a transitive auxiliary are grammatically transitive no matter what their meaning. Thus <i>nab jar</i> 'sleep' and <i>k'edzh jaaqqar</i> 'come to a boil' are transitive and require subjects in the ergative case despite their prototypically non-agentive meanings.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="513">Обычные переходные вспомогательные глаголы d.alar и d.aalar перфективны и часто инхоативны. Переходные глаголы в паре с глаголами в одном из этих типов, скорее всего, также будут инхоативными, но в остальном переходные вспомогательные глаголы не имеют особого аспектуального эффекта. Глаголы, образованные с переходным вспомогательным глаголом, грамматически являются переходными независимо от их значения. Так, nab jar 'спать' и k'edzh jaaqqar 'дойти до кипения' являются переходными и требуют подлежащего в эргативном падеже, несмотря на их прототипически неагентивные значения.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="514">Appendix 6. Demonstratives</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="514z">Приложение 6. Демонстрационные материалы</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="515">Ingush demonstratives distinguish three degrees of distance, while those of English distinguish only two. Thus glosses of the Ingush series may sometimes appear contradictory. The proximal series refer to the space close to the speaker (e.g. <i>uqaza</i> 'here, right here'), the distal series to space not close to either speaker or hearer (and often quite distant: <i>dwaa</i> 'over there, way over there'), and the medial series to space in the vicinity of both speaker and hearer and/or to aforementioned space or things (<i>ciga</i> 'there, in that place, in the aforementioned place'). In addition to these three degrees of distance, Ingush demonstratives systematically distinguish the meanings 'some, a', 'the other', 'another', and some others, as well as interrogatives. Some of the main demonstratives are:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="515">Ингушские демонстративы различают три степени расстояния, в то время как английские — только две. Поэтому глоссы ингушских серий иногда могут показаться противоречивыми. Проксимальная серия относится к пространству, расположенному близко к говорящему (например, указа 'здесь, прямо здесь'), дистальная серия — к пространству, не расположенному близко ни к говорящему, ни к слушающему (и часто довольно отдаленному: даа 'вон там, далеко вон там'), а медиальная серия — к пространству в непосредственной близости от говорящего и слушающего и/или к упомянутому пространству или предметам (цига 'там, в том месте, в упомянутом месте'). Помимо этих трех степеней расстояния, ингушские демонстративы систематически различают значения 'какой-то, а', 'другой', 'еще один', 'еще несколько', а также вопросительные предложения. К основным демонстративам относятся:</p>
 </td></tr></table>
 
@@ -1735,18 +1734,18 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="524">Appendix 7. Genders and gender agreement</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="524z">Приложение 7. Гендеры и гендерное соглашение</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="525"><b>Gender prefixes.</b> Some verbs and a few adjectives agree in gender with the noun or pronoun which is subject or direct object of the verb or modified by the adjective. Gender is marked by prefixation. There are four gender markers: <i>v-</i>, <i>j-</i>, <i>b-</i>, and <i>d-</i>. Gender of personal pronouns reflects the sex of the referent (<i>v-</i> is masculine, <i>j-</i> feminine), and in the plural it is based on person (first and second person are <i>d-</i>, third person <i>b-</i>). Gender of other nouns is arbitrary (though there are some broad semantic regularities).</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="525"><b>Гендерные префиксы.</b> Некоторые глаголы и некоторые прилагательные согласуются по роду с существительным или местоимением, которое является субъектом или прямым объектом глагола или модифицируется прилагательным. Пол обозначается с помощью префиксов. Существует четыре гендерных маркера: v-, j-, b- и d-. Пол личных местоимений отражает пол референта (v- — мужской, j- — женский), а во множественном числе он зависит от лица (первое и второе лицо — d-, третье — b-). Пол других существительных произволен (хотя существуют некоторые общие семантические закономерности).</p>
 </td></tr></table>
 
@@ -1772,16 +1771,16 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="541">Both singular and plural gender prefixes are shown in the dictionary for every noun, separated by a colon, e.g. (b : d). Some nouns have no plural or no singular, and their genders are shown as, for example, (b :) or (: d).</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="541">В словаре для каждого существительного указываются префиксы рода единственного и множественного числа, разделенные двоеточием, например, (b : d). Некоторые существительные не имеют ни множественного, ни единственного числа, и их род указывается, например, как (b :) или (: d).</p>
 </td></tr></table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="542">Examples of some verbs showing gender prefixation:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="542">Примеры некоторых глаголов с гендерной префиксацией:</p>
 </td></tr></table>
 
@@ -1800,27 +1799,27 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="551">There is no agreement in person. Number agreement is part of gender agreement.</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="551">В лице нет согласования. Соглашение о числе является частью гендерного соглашения.</p>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <h2 id="552">Appendix 8. Case functions and case government</h2>
-</td><td class=trl>
+</td><td class=trl2>
 <h2 id="552z">Приложение 8. Функции кейса и управление кейсом</h2>
 </td></tr></table>
 
 
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="553"><b>Cases of nouns and pronouns.</b> Case endings and declension paradigms are shown in <a href="#1">Appendix 1</a>. The basic functions of the cases are:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="553"><b>Падежи существительных и местоимений.</b> Падежные окончания и парадигмы склонения приведены в <a href="#1z">Приложении 1</a>. Основными функциями падежей являются:</p>
 </td></tr></table>
 
@@ -1839,9 +1838,9 @@ converb</u></td></tr>
 </table>
 
 
-<table class=prl><tr><td>
+<table class=prl><tr><td class=trl1>
 <p id="562">The subject and object cases required by verbs are shown in the dictionary. The main case frames governed by verbs are:</p>
-</td><td class=trl>
+</td><td class=trl2>
 <p id="562">Субъектный и объектный падежи, требуемые глаголами, указаны в словаре. Основными падежными рамками, управляемыми глаголами, являются:</p>
 </td></tr></table>
 
