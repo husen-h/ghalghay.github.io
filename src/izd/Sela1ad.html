@@ -1,20 +1,241 @@
-﻿<html>
+﻿<!DOCTYPE HTML>
+<html>
 <head>
 <title>«СелаӀад» («Радуга»). — Детский журнал. (Словари из 280-и номеров, без дублей в базе)</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 <style type="text/css"><!--
-body{font-size:120% !important; line-height:122% !important;
-word-spacing: 2px;color:#000050; margin-bottom: 7%;
-font-family: SFUIDisplay,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-Xbackground-color:#E6F9F9 !important;}
+
+
+html *, html ::after, html ::before {
+	box-sizing: inherit;
+	margin-bottom: 7% !important;
+}
+body, html {
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+}
+html *, html a, html li {
+	outline-color: inherit;
+}
+body {
+	margin-bottom: 8% !important;
+	font-size: 101%;
+	background-color: #ffffff;
+}
+
+
+
+/* /art-l */
+#als-expressform *, *, .als-share-circle, .share-circle, ::after, ::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	overflow-y: scroll;
+}
+body {
+	line-height:142% !important;
+	word-spacing: 3px; 
+	color:#000050; 
+}
+body {
+	-webkit-font-feature-settings: "kern" 1, "liga" 0;
+	-moz-font-feature-settings: "kern" 1, "liga" 0;
+	font-feature-settings: "kern" 1, "liga" 0;
+}
+.als-body-wrap {
+	display: flex;
+	height: 100%;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+}
+.typograf-bg, body.typograf-bg .als-body-wrap, body.typograf-bg .als-footer-wrap, body.typograf-page, body.typograf-page .als-body-wrap, body.typograf-page .als-footer-wrap {
+	background: #ebebeb;
+}
+.als-body-wrap, .als-search-v4-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+}
+.als-header-2021-padding {
+	padding-top: 123px;
+}
+.als-content-wrap {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	-ms-flex: 1 0 auto;
+	flex: 1 0 auto;
+}
+.als-text-title {
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 43px!important;
+	line-height: 1.3;
+}
+/* @media all and (max-width:1400px) */
+.als-text-title {
+	font-size: 43px;
+}
+.als-tabs {
+	text-align: center;
+	font-size: 18px;
+	margin: 1.9em 10px 2em;
+	position: relative;
+}
+.als-tabs a	{color: #000!important;}
+.als-tabs a:hover {
+    background: rgba(0,0,0,.1);
+    color: #000!important;
+}
+.als-text-container, .als-text-container-size, .announce__text {
+	max-width: 920px;
+	margin: 0 auto;
+}
+.als-text, .als-text-container, .announce__text {
+	font-size: 21px;
+	padding: 0 1em;
+}
+/* @media all and (max-width:1400px) */
+.als-text, .als-text-container, .announce__text {
+	font-size: 19px;
+}
+.als-text .text-margin, .als-text p, .als-text-container .text-margin, .als-text-container p, .text-margin.als-text-container, .text-margin.als-text, .announce__text .text-margin, .announce__text p, .text-margin.announce__text {
+	margin: 1em auto .7em;
+}
+.als-text p, .als-text-container p, .announce__text p {
+	font-family: inherit;
+	font-size: inherit;
+}
+.als-logo-barcode, .blue-store-button, a.download, span.pause span {
+	position: relative;
+	font-weight: bold;
+}
+a:link {
+	color: #0089ff;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 137, 255, .3);
+	-webkit-transition: color .3s ease, border-color .3s ease;
+	transition: color .3s ease, border-color .3s ease;
+}
+a.download:hover:before {
+    opacity: .6;
+}
+a.download::before {
+	content: "";
+	display: block;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	left: -17px;
+	top: 6px;
+	background: url(./src/icons/download-icon.svg) no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.4;
+	-webkit-transition: opacity .3s cubic-bezier(.55, .08, .06, .97);
+	transition: opacity .3s cubic-bezier(.55, .08, .06, .97);
+}
+.als-tabs a {
+	font-size: inherit;
+	padding: .5em 1.2em;
+	text-decoration: none;
+	border: none;
+	position: relative;
+	display: inline-block;
+}
+.als-tabs span {
+	font-size: inherit;
+	padding: .0em 0em;
+	text-decoration: none;
+	border: none;
+	position: relative;
+	display: inline-block;
+}
+.als-tabs span a {
+	color: #ffffff !important;
+}
+.als-tabs span a:hover, .als-tabs span a:visited {
+	color: #ffffff !important;
+	background-color: #111BEF !important;
+}
+.als-tabs a {
+	color: #000;
+	background: rgba(0,0,0,.05);
+	cursor: pointer;
+}
+.als-tabs a:not(.selected) {
+	-webkit-transition: background .2s cubic-bezier(.55, .08, .06, .97);
+	transition: background .2s cubic-bezier(.55, .08, .06, .97);
+}
+.als-tabs .als-tabs-bg, .als-tabs a.pseudo-selected, .als-tabs a.selected, .als-tabs a.with-nav, .als-tabs span {
+	color: #fff;
+}
+.als-tabs .als-tabs-bg, .als-tabs a.selected, .als-tabs a.with-nav, .als-tabs span {
+	background: #4149F2;
+}
+.als-tabs ins {
+	outline: 0;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0px);
+	transform: translateX(0px);
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	line-height: 1.3;
+	vertical-align: baseline;
+}
+.als-tabs ins::before {
+	display: none;
+}
+.als-tabs .als-tabs-bg ins, .als-tabs a.pseudo-selected ins, .als-tabs a.selected ins, .als-tabs a.with-nav ins, .als-tabs span ins {
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+.als-tabs .als-tabs-bg ins::before, .als-tabs a.pseudo-selected ins::before, .als-tabs a.selected ins::before, .als-tabs a.with-nav ins::before, .als-tabs span ins::before {
+	left: -0.8em;
+	opacity: 1;
+}
+.als-text .h1, .als-text .subtitle, .als-text h1, .als-text-container .h1, .als-text-container .subtitle, .als-text-container h1, .als-text-title .h1, .als-text-title .subtitle, .als-text-title h1 {
+	font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 400;
+}
+.als-text .h1, .als-text h1, .als-text-container .h1, .als-text-container h1, .als-text-title .h1, .als-text-title h1 {
+	font-weight: 400;
+	font-size: inherit;
+	margin-bottom: 0.2em;
+	margin-top: 1.1em;
+}
+/* art-l/ */
+
+
+
+
+
+
+
+
 
 b {font-weight:500 !important;}
 P	{ margin: 0em 0; font-size:90% !important;}
 P.text	{ text-align: justify; text-indent: 3em;}
 .rght	{ text-align: right; margin: 1em 0 1.5em 0;}
-h2{text-align:center; margin: 1em 0 1em 0;font-weight:500 !important;}
-h4{text-align:center; margin: 0em 0 2em 0;font-weight:500 !important;}
+h2{text-align:center; margin: 1em 0 1em 0; font-weight:500 !important;}
+h4{text-align:center; margin: 0em 0 2em 0; font-weight:500 !important;}
 td {width:16px}
 
 a:link {
@@ -49,6 +270,12 @@ a:active  { color:#8B0000; }
 --></style>
 </head>
 <body>
+
+<div class="als-body-wrap">
+
+<div class="als-content-wrap" data-als-search="wrapper">
+<div class="als-text-container">
+
 
 <h2>«СелаӀад» («Радуга»)</h2>
 <h4>(Словари из 280-и номеров, без дублей в базе)</h4>
@@ -93,5 +320,12 @@ a:active  { color:#8B0000; }
 </tbody>
 </table>
 </div>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
 
 
