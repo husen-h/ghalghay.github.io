@@ -1,10 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <title>Ирон растфыссынад бæлвырдгæнæн · Проверка о орфографии</title>
+        <title>Ирон растфыссынад бæлвырдгæнæн · Проверка осетинской орфографии</title>
         
         <meta charset="UTF-8">
         <meta name="http-equiv" content="Content-type: text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
             
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
         <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
@@ -13,7 +14,7 @@
              window.hunspellReady = function() { 
                  console.log("hunspellReady done!");
                  const hiddenDiv = document.getElementById('hidden-div');
-                 hiddenDiv.style.display = 'flex';
+                 hiddenDiv.style.display = 'none';
                  document.getElementById('editor_container').style.display = 'flex';
              }
         </script>
@@ -63,7 +64,7 @@
                 height: 1%;
                 flex: 1;
                 /* display: flex;  */
-                display: flex; 
+                display: none; 
                 flex-direction: column;
             }
             #editor {
@@ -352,7 +353,7 @@
     
     var hidDivFlag = false;
     document.getElementById('editor_container').onmouseover = function() {
-        document.getElementById('hidden-div').style.display = 'flex';
+        document.getElementById('hidden-div').style.display = 'none';
         hidDivFlag = false;
     }
 
@@ -404,7 +405,7 @@
                                     }
                                 );
                                 
-                                hiddenDiv.style.display = 'flex';
+                                hiddenDiv.style.display = 'none';
                             }
                             hiddenDiv.ul.appendChild(document.createElement("li")).appendChild(node);
                         }
