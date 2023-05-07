@@ -985,10 +985,23 @@ function fix(obj) {
    obj.value = obj.value.replace(/[áàâǎăãảạäåāąấầẫẩậắằẵẳặǻ]/g, 'а');
    obj.value = obj.value.replace(/[éèêěĕẽẻėëēęếềễểẹệ]/g, 'е');
    obj.value = obj.value.replace(/[óòŏôốồỗổǒöőõøǿōỏơớờỡởợọộ]/g, 'о');
+úùứừ
+ýỳŷẏỵÿȳỹẙyƴỷɏ
 */
    obj.value = obj.value.replace(/[́̀]/g, '');
 
 
+   obj.value = obj.value.replace(/(((\s|^)á[а-яё])|([а-яё])á(\s|$|[а-яё]))/gi, function(m) {return m.replace('á', 'а');});
+   obj.value = obj.value.replace(/(((\s|^)é[а-яё])|([а-яё])é(\s|$|[а-яё]))/gi, function(m) {return m.replace('é', 'е');});
+   obj.value = obj.value.replace(/(((\s|^)ó[а-яё])|([а-яё])ó(\s|$|[а-яё]))/gi, function(m) {return m.replace('ó', 'о');});
+   obj.value = obj.value.replace(/(((\s|^)ú[а-яё])|([а-яё])ú(\s|$|[а-яё]))/gi, function(m) {return m.replace('ú', 'и');});
+   obj.value = obj.value.replace(/(((\s|^)ý[а-яё])|([а-яё])ý(\s|$|[а-яё]))/gi, function(m) {return m.replace('ý', 'у');});
+
+   obj.value = obj.value.replace(/(((\s|^)á[a-z])|([a-z])á(\s|$|[a-z]))/gi, function(m) {return m.replace('á', 'a');});
+   obj.value = obj.value.replace(/(((\s|^)é[a-z])|([a-z])é(\s|$|[a-z]))/gi, function(m) {return m.replace('é', 'e');});
+   obj.value = obj.value.replace(/(((\s|^)ó[a-z])|([a-z])ó(\s|$|[a-z]))/gi, function(m) {return m.replace('ó', 'o');});
+   obj.value = obj.value.replace(/(((\s|^)ú[a-z])|([a-z])ú(\s|$|[a-z]))/gi, function(m) {return m.replace('ú', 'u');});
+   obj.value = obj.value.replace(/(((\s|^)ý[a-z])|([a-z])ý(\s|$|[a-z]))/gi, function(m) {return m.replace('ý', 'y');});
 
 
 
