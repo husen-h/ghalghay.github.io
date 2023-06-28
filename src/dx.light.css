@@ -24,8 +24,10 @@ background-image:url(https://yastatic.net/s3/disk/promo/new-year-2022/disk/onboa
 .dx-datagrid-rowsview  {padding-bottom: 20em; Xoverflow: hidden !important;}
 
 
-
-
+.dx-datagrid .dx-column-lines > td {
+    Xborder-left: 1px solid #3F4041;
+    Xborder-right: 1px solid #D3DBE7;
+}
 
 
 
@@ -11662,7 +11664,7 @@ display:none; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! скрытие зн�
   border-bottom: 1px solid #3F4041;
 }
 .dx-datagrid .dx-column-lines > td {
-  Xborder-left: 1px solid #3F4041;      /*!!! dotted вертикальные ячеек фильтра  !!!!!!*/
+  border-left: 1px solid #3F4041;      /*!!! dotted вертикальные ячеек фильтра  !!!!!!*/
   border-right: 1px solid #D3DBE7;     /*!!! вертикальные не-фильтра ячеек !!!!!!*/
   white-space: normal; /*!!!  осн яч*/
 }
@@ -11695,7 +11697,7 @@ display:none; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! скрытие зн�
 
 
 .dx-datagrid .dx-row > td {
-  padding: 3px 6px 7px 6px;   /*!!!*/
+  padding: 2px 6px 5px 6px;   /*!!!*/
 }
 .dx-datagrid .dx-datagrid-content .dx-datagrid-table .dx-row .dx-command-edit-with-icons .dx-link {
   width: 18px;
@@ -12243,8 +12245,8 @@ display:none; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! скрытие зн�
 .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused).dx-column-lines > tr > td,
 .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover.dx-column-lines > td,
 .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover.dx-column-lines > tr > td {
-  border-left-color: #EA93A0;
-  border-right-color: #EA93A0;
+  Xborder-left-color: #EA93A0; /*выделение ячеек вертикальн линии*/
+  Xborder-right-color: #EA93A0;
 }
 .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused).dx-row-lines > td,
 .dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused).dx-row-lines > tr > td,

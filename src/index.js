@@ -672,9 +672,10 @@ d.axkar
            if(rowData.d){
              var text = rowData.d.replace(/#/g,"");
              //var text = rowData.d.replace(/(—)/g, "–");  //длинное тире — на среднее
-             text = text.replace(/(♦)/g, "<sep2>♦</sep2>");
+             text = text.replace(/(●)/g, "<sep2>●</sep2>");
 
 
+             text = text.replace(/ — /g, "&nbsp;— ");
 
              //text = text.replace(/( \d+\)| \d+\.) /g, "<br><li>$1 ");
              //text = text.replace(/([бвд])\.([аеиоӀу])/g,"<cc>$1</cc>$2"); //Николс — обработка точки после кирилл. класса

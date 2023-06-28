@@ -163,9 +163,9 @@ html {
     max-width: 100%; 	/*Add*/
     overflow-x: hidden; /*Add*/
 }
-/*#### Let's get this party started */
+/*#### Let's get this party started (для определенных значений - возникает 2px border) */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 /*#### Track */
 ::-webkit-scrollbar-track {
@@ -407,9 +407,9 @@ html {
 
 /*коды авторов*/
 ant17 { box-shadow: 0px 0px 3px 13px #471D1C; background-color:#ac5e42; color:#ffffff;
-                                              padding: 1px 0px 4px 2px;}
+                                              padding: 1px 0px 2px 1px;}
 ant21 { box-shadow: 0px 0px 3px 13px #000000; background-color:#ffffff; color:#000000;
-                                              padding: 1px 0px 4px 2px;}
+                                              padding: 1px 0px 2px 1px;}
 dud15 { box-shadow: 0px 0px 3px 13px #c2af9a; background-color:#c2af9a; color:#8e3635;}
 kod21 { box-shadow: 0px 0px 3px 13px #1f3c8e; background-color:#1f3c8e; color:#B7AD98;}
 irt16 { box-shadow: 0px 0px 3px 13px #96391d; background-color:#96391d; color:#D0B64E;}
@@ -501,7 +501,7 @@ c6 { background-color:#FF0000; padding:10px 0px 170px 0px; color:#FFFFFF;}
 
 
 
-.dx-scrollable-container { line-height:110% !important;} /*межстрочный интервал*/
+.dx-scrollable-container { line-height:112% !important;} /*межстрочный интервал*/
 
 
 
@@ -722,9 +722,9 @@ Xem ttr:after {content: "]"; margin: 0px 2px 0px 2px;}
 trl {color:#F44A57 !important;} /*F44A57 F08080 E1567C*/
 _trl:before {content: "\A"; white-space: pre;} /*\003C*/
 _trl:after {content: ""; white-space: pre;} /*\003E*/
-/*Для переводных второго уровня (♦) */
+/*Для переводных второго уровня (●○♦) */
 trl#a2 {color:#F44A57 !important; } /*F44A57 F08080*/
-trl#a2:before {content: "\A\2666\0020"; /*♦ */ white-space: pre;} /*\003C*/
+trl#a2:before {content: "\A\25CF\0020"; /*●\25CF  \2666♦*/ white-space: pre;} /*\003C*/
 trl#a2:after {content: ""; white-space: pre;} /*\003E*/
 
 
