@@ -984,7 +984,9 @@ a {
     margin-bottom: 0px !important;
   }
   .dx-datagrid .dx-column-lines > td {
-    border-right: 0px solid #ffffff;     /*!!! вертикальные не-фильтра ячеек !!!!!!*/
+    /*!!! вертикальные не-фильтра ячеек !!!!!!*/
+    border-left: 0px solid #ffffff !important;
+    border-right: 0px solid #ffffff !important;
   }
   j { /*<j>*/
     display: none !important; 
