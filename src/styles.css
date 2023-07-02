@@ -501,7 +501,7 @@ c6 { background-color:#FF0000; padding:10px 0px 170px 0px; color:#FFFFFF;}
 
 
 
-.dx-scrollable-container { line-height:112% !important;} /*межстрочный интервал*/
+.dx-scrollable-container { line-height:120% !important;} /*межстрочный интервал*/
 
 
 
@@ -612,7 +612,7 @@ em u:before {
   /*background: url('li.gif') no-repeat 0 0.6em;*/
 }
 .dx-scrollable-container td li.ant:before {
-	content: "◑";
+	content: "\25D1\0020"; /* Круг с черной правой половиной ◑ */
 	position: absolute;
 	left: -2px;
 	font-size: 11px !important;
@@ -918,6 +918,24 @@ a {
 ОБЪЕДИНЕНИЕ КОЛОНОК "b-c-d-e" (АДАПТИВНОСТЬ). Аналог фраг. скрипта "скрытие опред-ных столбцов по классу, когда экран меньше..." /index.js/
 */
 @media (max-width: 500px) {
+
+/*ant21, ant17, dud15, kod21, irt16, irsns, kodkt, 
+raz01, raz02, pti09, med19, kod18, its33, uzh27, 
+selaa, xayor, kar95, kur05, nic04
+{
+  text-decoration: none !important; width:100; Xheight:18px; float:right; 
+  font-size:9px !important; text-align:left !important; white-space:nowrap; 
+  overflow: visible; Xfont-variant:small-caps; letter-spacing: -.04em;
+  Xmargin:0px auto; margin:9px 0px 0px 0px !important;
+*//*поворот надписи*/
+/*    display: inline-block;
+    Xtext-align: right !important;
+    -webkit-transform: rotate(-90deg);
+*/    /* transform: rotate(-90deg); */
+/*}*/
+
+
+
   .dx-data-row .b, 
   .dx-data-row .c, 
   .dx-data-row .d, 
