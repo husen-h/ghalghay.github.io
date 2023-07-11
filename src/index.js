@@ -978,7 +978,7 @@ $(window).on('resize', function(){
 
 
 
-//[ΙIl1]Ӏ	———	dx.all.js	———	<input onkeyup='fix(this)' type='text' minlength='1' required title='' class='md-input' placeholder='S'>
+//[ΙIl1]Ӏ	———	dx.all.js	———	_createInput:function(){var e=(0,i.default)("<input onkeyup='fix(this)' type='text' minlength='1' required title='' class='md-input' Xplaceholder=''>
 function fix(obj) {
 
 
