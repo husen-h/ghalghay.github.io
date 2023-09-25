@@ -115,6 +115,7 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
 
 
 
+        //data = data.replace(/<br>/g,"\n");  //чтобы слова не слипались послу уд. тегов
 
         data = data.replace(/(\u0301|\u0300|\u0308|\u0302|\u030C|\u0304|<\/y>~|\u007C\u007C|<[^>]*>|\u00B6)/g,""); //¶=u00B6||̈=\u0308||    диапазон символов: [\u0300-\u036f]  [̀ - \u0300]
 
@@ -500,6 +501,10 @@ $(function(){
              //////text = text.replace(/(<li><b>.*?<\/b>)\r\n<li><l>(<b>.*?<\/b>)<\/l>/g, "<li>$2$1");
              text = text.replace(/(\|\|)/g, "<sep3>||</sep3>");
 
+             //<im>D:/grp_027/Истинг.jpg</im>
+//<im_100>D:/Lib/(КАВКАЗ/(PICs/(Г1АЬРЧОШ/(((((((((GRPs/grp_028/isting_studio_79982081_200222814441797_8323120951432449976_n.jpg</im_100><im_60>D:/Lib/(КАВКАЗ/(PICs/(Г1АЬРЧОШ/(((((((((GRPs/grp_028/isting_studio_79982081_200222814441797_8323120951432449976_n.jpg</im_60><im_60>D:/Lib/(КАВКАЗ/(PICs/(Г1АЬРЧОШ/(((((((((GRPs/grp_028/17 век — Фуртоуг — «Истинг фамилии Ахриевых».png</im_60>
+             //text = text.replace(/<im_100>(.*?)<\/im_100>/g,"<a href='$1' target='blank'><img class='im_100' src='$1'></a>");
+             //text = text.replace(/<im_60>(.*?)<\/im_60>/g,"<a href='$1' target='blank'><img class='im_60' src='$1'></a>");
 
 //Николс
 //Николс
@@ -596,7 +601,7 @@ d.axkar
         calculateCellValue: function(rowData){
            if(rowData.c){
              var text = rowData.c.replace(/#/g,"");
-             text = text.replace(/(\|)/g, "<sep>|</sep>");
+             text = text.replace(/(\|)/g, "<sep>|</sep>\n");
              return text;
            }
         },
@@ -606,7 +611,7 @@ d.axkar
                 options.dataSource.postProcess = function (results) {
                     let x = results.reduce(function(map, entry) {
                         //let newItems = entry.value.split('|');
-                        let newItems = entry.value ? entry.value.split('<sep>|</sep>') : [];
+                        let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
                         return map.concat(newItems);
                     }, [])
                     .filter((e, i , arr) => arr.indexOf(e) === i && e.length)
@@ -818,7 +823,15 @@ d.axkar
              text = text.replace(/(Терм33-)/g, "Термины: 33\) Астрономия");
              text = text.replace(/(Терм34-)/g, "Термины: 34\) Абстрактные понятия");
 
-             text = text.replace(/(\|)/g, "<sep>|</sep>");
+
+
+
+
+             //text = text.replace(/(.*?)/g, "<span title='$1'>$1</span>");
+
+
+
+             text = text.replace(/(\|)/g, "<sep>|</sep>\n");
              return text;
            }
         },
@@ -828,7 +841,7 @@ d.axkar
                 options.dataSource.postProcess = function (results) {
                     let x = results.reduce(function(map, entry) {
                         //let newItems = entry.value.split('|');
-                        let newItems = entry.value ? entry.value.split('<sep>|</sep>') : [];
+                        let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
                         return map.concat(newItems);
                     }, [])
                     .filter((e, i , arr) => arr.indexOf(e) === i && e.length)
@@ -992,17 +1005,17 @@ function fix(obj) {
    obj.value = obj.value.replace(/[́̀]/g, '');
 
 
-   obj.value = obj.value.replace(/(((\s|^)á[а-яё])|([а-яё])á(\s|$|[а-яё]))/gi, function(m) {return m.replace('á', 'а');});
-   obj.value = obj.value.replace(/(((\s|^)é[а-яё])|([а-яё])é(\s|$|[а-яё]))/gi, function(m) {return m.replace('é', 'е');});
-   obj.value = obj.value.replace(/(((\s|^)ó[а-яё])|([а-яё])ó(\s|$|[а-яё]))/gi, function(m) {return m.replace('ó', 'о');});
-   obj.value = obj.value.replace(/(((\s|^)ú[а-яё])|([а-яё])ú(\s|$|[а-яё]))/gi, function(m) {return m.replace('ú', 'и');});
-   obj.value = obj.value.replace(/(((\s|^)ý[а-яё])|([а-яё])ý(\s|$|[а-яё]))/gi, function(m) {return m.replace('ý', 'у');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)á[а-яё])|([а-яё])á(\s|\b|[^\w]|$|[а-яё]))/gi, function(m) {return m.replace('á', 'а');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)é[а-яё])|([а-яё])é(\s|\b|[^\w]|$|[а-яё]))/gi, function(m) {return m.replace('é', 'е');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)ó[а-яё])|([а-яё])ó(\s|\b|[^\w]|$|[а-яё]))/gi, function(m) {return m.replace('ó', 'о');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)ú[а-яё])|([а-яё])ú(\s|\b|[^\w]|$|[а-яё]))/gi, function(m) {return m.replace('ú', 'и');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)ý[а-яё])|([а-яё])ý(\s|\b|[^\w]|$|[а-яё]))/gi, function(m) {return m.replace('ý', 'у');});
 
-   obj.value = obj.value.replace(/(((\s|^)á[a-z])|([a-z])á(\s|$|[a-z]))/gi, function(m) {return m.replace('á', 'a');});
-   obj.value = obj.value.replace(/(((\s|^)é[a-z])|([a-z])é(\s|$|[a-z]))/gi, function(m) {return m.replace('é', 'e');});
-   obj.value = obj.value.replace(/(((\s|^)ó[a-z])|([a-z])ó(\s|$|[a-z]))/gi, function(m) {return m.replace('ó', 'o');});
-   obj.value = obj.value.replace(/(((\s|^)ú[a-z])|([a-z])ú(\s|$|[a-z]))/gi, function(m) {return m.replace('ú', 'u');});
-   obj.value = obj.value.replace(/(((\s|^)ý[a-z])|([a-z])ý(\s|$|[a-z]))/gi, function(m) {return m.replace('ý', 'y');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)á[a-z])|([a-z])á(\s|\b|[^\w]|$|[a-z]))/gi, function(m) {return m.replace('á', 'a');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)é[a-z])|([a-z])é(\s|\b|[^\w]|$|[a-z]))/gi, function(m) {return m.replace('é', 'e');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)ó[a-z])|([a-z])ó(\s|\b|[^\w]|$|[a-z]))/gi, function(m) {return m.replace('ó', 'o');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)ú[a-z])|([a-z])ú(\s|\b|[^\w]|$|[a-z]))/gi, function(m) {return m.replace('ú', 'u');});
+   obj.value = obj.value.replace(/(((\s|\b|[^\w]|^)ý[a-z])|([a-z])ý(\s|\b|[^\w]|$|[a-z]))/gi, function(m) {return m.replace('ý', 'y');});
 
 
 
