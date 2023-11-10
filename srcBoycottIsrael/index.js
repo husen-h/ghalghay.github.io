@@ -708,6 +708,7 @@ $(function(){
                 options.dataSource.postProcess = function (results) {
                     let x = results.reduce(function(map, entry) {
                         //let newItems = entry.value.split('|');
+                        entry.value = entry.value.replace(/<[^>]*>/g,"");
                         let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
                         return map.concat(newItems);
                     }, [])
