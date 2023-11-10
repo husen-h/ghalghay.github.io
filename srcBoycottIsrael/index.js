@@ -106,8 +106,8 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         //data = data.replace(/\u0439\u0443/g,"\u044E"); 	//йу——ю
 
 
-        //data = data.replace(/надсмеивание/g,"высмеивание"); //надсмеивание=высмеивание
-        //data = data.replace(/высмеивание/g,"надсмеивание"); //надсмеивание=высмеивание
+        data = data.replace(/7UP/g,"7 UP");
+        data = data.replace(/\u0027/g,"\u2019");  //’    '
 
 
 
@@ -789,6 +789,7 @@ $(function(){
         $('trl').closest('li').addClass('li_trl'); //отдельный окрас тире для LI
 
         $('tr td h4').closest('td').css('background-color', '#66ccff');
+        $('tr td rr').closest('td').css('color', '#FF4338');
         // ...
 
 
