@@ -2,7 +2,7 @@
 
 //äãâéèęëôöółüşı
 
-{"b":"<h4><r>BOYCOTT OF COMPANIES THAT SUPPORT «ISRAEL»</r><br><br><r>Products with barcodes starting with the digits 729 or 871 are made in «Israel»</r><br><br><r>Do not interact with the following companies/businesses/products:</r>", "d":"<h4>БОЙКОТ КОМПАНИЙ, ПОДДЕРЖИВАЮЩИХ «ИЗРАИЛЬ»<br><br>Продукция со штрих-кодом, начинающимся на 729, 841, 871, как правило изготовлена в «Израиле»<br><br>Не взаимодействуйте со следующими компаниями/предприятиями/продуктами", "e":"<h4>Источники списка:<br><br><a href='https://www.instagram.com/barkinkhoeva.f/'>@barkinkhoeva.f</a><br><a href='https://t.me/palestinewillbefree06'>@palestinewillbefree06</a>"},
+{"b":"<h4><r>BOYCOTT OF COMPANIES THAT SUPPORT «ISRAEL»</r><br><br><r>Products with barcodes starting with the digits 729 or 871 are made in «Israel»</r><br><br><r>Do not interact with the following companies/businesses/products:</r>", "d":"<h4>БОЙКОТ КОМПАНИЙ, ПОДДЕРЖИВАЮЩИХ «ИЗРАИЛЬ»<br><br>Продукция со штрих-кодом, начинающимся на 729, 841, 871, как правило изготовлена в «Израиле»<br><br>Не взаимодействуйте со следующими компаниями/предприятиями/продуктами", "e":"<h4>Источники списка:<br><br><a href='https://www.instagram.com/barkinkhoeva.f/'>@barkinkhoeva.f</a><br><a href='https://t.me/palestinewillbefree06'>@palestinewillbefree06</a><br><br><a href='https://bdnaash.com/'>bdnaash.com</a>"},
 
 {"b":"<li><b>McDonald's</b><rr>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Cofix</b><rr>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
@@ -1572,7 +1572,6 @@
 {"b":"<li><b>Zotos Professional</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Zovirax</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Zywiec Zdroj</b>", "d":"", "e":"Other (Другое)"},
-{"b":"<li><b></b>", "d":"", "e":"Other (Другое)"},
 
 
 ];
