@@ -122,6 +122,7 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(Coffee-Mate|Coffee Mate)/g,"Coffee Mate");
         data = data.replace(/(Glaceau Smart Water|Glaceau Smartwater)/g,"Glaceau Smart Water");
         data = data.replace(/(Soda Stream|SodaStream)/g,"SodaStream");
+        data = data.replace(/(&|and)/g,"and");
 
 
 
