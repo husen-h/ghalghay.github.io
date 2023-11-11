@@ -108,6 +108,9 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
 
         data = data.replace(/7UP/g,"7 UP");
         data = data.replace(/\u0027/g,"\u2019");  //’    '
+        data = data.replace(/(Kimberley|kimberliy|Kimberly)/g,"Kimberley");
+
+
 
 
 
