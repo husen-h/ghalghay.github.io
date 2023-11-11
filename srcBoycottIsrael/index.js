@@ -109,6 +109,19 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/7UP/g,"7 UP");
         data = data.replace(/\u0027/g,"\u2019");  //’    '
         data = data.replace(/(Kimberley|kimberliy|Kimberly)/g,"Kimberley");
+        data = data.replace(/(L’Ore.al)/g,"L’Oreal");
+        data = data.replace(/(L’Oreal|Loreal)/g,"Loreal");
+        data = data.replace(/(McDonald’s|McDonalds)/g,"McDonalds");
+        data = data.replace(/(Oral-B|Oral B)/g,"Oral-B");
+        data = data.replace(/(Victoria’s|Victorias)/g,"Victorias");
+        data = data.replace(/(Walker’s|Walkers)/g,"Walkers");
+        data = data.replace(/(Wall’s|Walls)/g,"Walls");
+        data = data.replace(/(Ambi Pur|Ambipur)/g,"Ambipur");
+        data = data.replace(/(Clear Blue|Clearblue)/g,"Clearblue");
+        data = data.replace(/(Coca-Cola|Coca Cola)/g,"Coca Cola");
+        data = data.replace(/(Coffee-Mate|Coffee Mate)/g,"Coffee Mate");
+        data = data.replace(/(Glaceau Smart Water|Glaceau Smartwater)/g,"Glaceau Smart Water");
+        data = data.replace(/(Soda Stream|SodaStream)/g,"SodaStream");
 
 
 
