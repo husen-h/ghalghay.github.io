@@ -1110,9 +1110,22 @@ abr[ttl]:focus::after {
 
 
 
-
-
-
+.span-inst, .span-tg, .span-blue {
+  border-radius: 42px;
+  background: rgba(244,74,87,0.8);
+  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+  white-space: nowrap;
+  padding:0px 10px 2px 8px !important;
+}
+.span-inst {
+  background-color:#E64980; color:#ffffff;
+}
+.span-tg {
+  background-color:#448FD5; color:#ffffff;
+}
+.span-blue {
+  background-color:#0000FF; color:#ffffff;
+}
 
 
 
