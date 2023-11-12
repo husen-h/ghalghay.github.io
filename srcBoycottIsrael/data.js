@@ -1557,7 +1557,6 @@
 {"b":"<li><b>Zywiec Zdroj</b>", "d":"", "e":"Other (Другое)"},
 
 
-
 //https://boycott.thewitness.news/browse/
 {"b":"<li><b>Bayer Pharmaceuticals</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>BP (British Petroleum)</b>", "d":"", "e":"Other (Другое)"},
@@ -1578,7 +1577,6 @@
 {"b":"<li><b>Sephora</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Tresemme</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Unicef</b>", "d":"", "e":"Other (Другое)"},
-
 
 
 ];

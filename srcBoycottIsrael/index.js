@@ -102,7 +102,6 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
 
         ////data = data.replace(/\u00E4/g,"\u0061\u0308"); 	//ä——ä(a+̈)
 
-
         //data = data.replace(/\u0439\u0443/g,"\u044E"); 	//йу——ю
 
 
