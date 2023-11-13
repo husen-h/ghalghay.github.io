@@ -6,7 +6,6 @@
 
 
 
-
 {"b":"<li><b>McDonald's</b><rr>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Cofix</b><rr>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Starbucks</b><rr>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
