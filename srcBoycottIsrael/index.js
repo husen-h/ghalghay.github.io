@@ -122,8 +122,8 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(Glaceau Smart Water|Glaceau Smartwater)/g,"Glaceau Smart Water");
         data = data.replace(/(Soda Stream|SodaStream)/g,"SodaStream");
         data = data.replace(/(&|and)/g,"and");
-
-
+        data = data.replace(/JPMorgan/g,"JP Morgan");
+        data = data.replace(/(Levi’s|Levis)/g,"Levis");
 
 
 
