@@ -792,7 +792,6 @@ $(function(){
 
 
 
-
     onContentReady: function(e) { //после отрисовки страницы
         e.component.option("loadPanel.enabled", false);
 

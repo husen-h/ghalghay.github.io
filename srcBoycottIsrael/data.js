@@ -6,7 +6,6 @@
 
 
 
-
 {"b":"<li><b>McDonald's</b><rr> <sup><a href='https://bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide' target='_blank'>*</a></sup>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Cofix</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Starbucks</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
