@@ -12,7 +12,7 @@
 {"b":"<li><b>Starbucks</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>KFC</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Pizza Hut</b><rr> <sup><a href='https://bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide' target='_blank'>*</a></sup>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
-{"b":"<li><b>Costa Coffee (Coca Cola brand)</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
+{"b":"<li><b>Coca Cola</b>", "d":"<li><b>Costa</b> Coffee", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Max Brenner</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Tim Hortons</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 {"b":"<li><b>Taco Bell</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
@@ -22,11 +22,11 @@
 {"b":"<li><b>Yum Foods</b>", "d":"", "e":"Cafes / Restaurants (Кафе / рестораны)"},
 
 {"b":"<li><b>Carrefour</b><rr> <sup><a href='https://bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide' target='_blank'>*</a></sup>", "d":"", "e":"Supermarkets (Супермаркеты)"},
-{"b":"<li><b>Selfridges (UK)</b>", "d":"", "e":"Supermarkets (Супермаркеты)"},
+{"b":"<li><b>Selfridges</b> (UK)", "d":"", "e":"Supermarkets (Супермаркеты)"},
 {"b":"<li><b>Tesco</b>", "d":"", "e":"Supermarkets (Супермаркеты)"},
 {"b":"<li><b>Walmart</b>", "d":"", "e":"Supermarkets (Супермаркеты)"},
 
-{"b":"<li><b>Medjool dates (ONLY ALLOWED Zaytoun or Yaffa, OTHERS ARE NOT, even if labeled made in Palestine). Финики сорта Меджул (Брать только Zaytoun или Yaffa, другие лучше не покупать, даже если на маркировке указано «Сделано в Палестине»)</b>", "d":"", "e":"Foods, except kids (Продукты питания, кроме детского)"},
+{"b":"<li><b>Medjool dates</b> (ONLY ALLOWED Zaytoun or Yaffa, OTHERS ARE NOT, even if labeled made in Palestine).<li><b>Финики сорта Меджул</b> (Брать только Zaytoun или Yaffa, другие лучше не покупать, даже если на маркировке указано «Сделано в Палестине»)", "d":"", "e":"Foods, except kids (Продукты питания, кроме детского)"},
 {"b":"<li><b>Eden Springs</b>", "d":"", "e":"Foods, except kids (Продукты питания, кроме детского)"},
 {"b":"<li><b>Sadaf Foods</b>", "d":"", "e":"Foods, except kids (Продукты питания, кроме детского)"},
 
@@ -1633,7 +1633,6 @@
 {"b":"<li><b>Compass</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Conde Nast</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Cooley LLP</b>", "d":"", "e":"Other (Другое)"},
-{"b":"<li><b>Costa</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>Costco</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>CV Starr</b>", "d":"", "e":"Other (Другое)"},
 {"b":"<li><b>CyberArk Software</b>", "d":"", "e":"Other (Другое)"},
