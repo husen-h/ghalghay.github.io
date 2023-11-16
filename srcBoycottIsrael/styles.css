@@ -1032,9 +1032,6 @@ selaa, xayor, kar95, kur05, nic04
     display: none;
   }*/
 
-.span-inst, .span-tg, .span-blue {
-    line-height:24px !important;
-}
 
 }
 
@@ -1127,6 +1124,7 @@ abr[ttl]:focus::after {
   white-space: nowrap;
   padding:0px 10px 2px 8px !important;
   font-size: 80%;
+  line-height:24px !important;
 }
 .span-inst {
   background-color:#E64980; color:#ffffff;
@@ -1137,7 +1135,6 @@ abr[ttl]:focus::after {
 .span-blue {
   background-color:#0000FF; color:#ffffff;
 }
-
 
 
 
