@@ -1,6 +1,6 @@
 ﻿.dx-datagrid-summary-item { /*!!!!!!!!!!!!!!!!!!!!*/
 	margin: -1px 0px 0px 180px !important;
-	right: 20px;
+	right: 30px;
 }
 
 .author .img-container_item {
@@ -13,7 +13,9 @@
 .dx-datagrid-rowsview tr:hover td.b b {  /*ADD выделение строки под курсором*/
   color: #808080 !important;
 }
-
+#inst {
+	margin: -1px 6% 0px 0px !important;
+}
 
 
 .dx-data-row .cell-highlighted {
@@ -1029,6 +1031,11 @@ selaa, xayor, kar95, kur05, nic04
    .c:blank li {
     display: none;
   }*/
+
+.span-inst, .span-tg, .span-blue {
+    line-height:24px !important;
+}
+
 }
 
 

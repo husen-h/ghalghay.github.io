@@ -124,6 +124,8 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(&|and)/g,"and");
         data = data.replace(/JPMorgan/g,"JP Morgan");
         data = data.replace(/(Levi’s|Levis)/g,"Levis");
+        data = data.replace(/(Bristol-Myers|Bristol Myers)/g,"Bristol-Myers");
+        data = data.replace(/(HeidelbergCement|Heidelberg Cement)/g,"HeidelbergCement");
 
 
 
@@ -696,7 +698,7 @@ $(function(){
         width: '33%',
         dataField: 'e',
         //alignment: "right",  //!!
-        caption: 'Направление',
+        caption: 'Сектор',
         cssClass: "e", //Задает классCSS,прим-ый к яч-м: ".dx-data-row .cell-highlighted {"
 
 
@@ -714,7 +716,7 @@ $(function(){
 
 
 
-             //text = text.replace(/(\|)/g, "<sep>|</sep>\n");
+             text = text.replace(/(\|)/g, "<sep>|</sep>\n");
              return text;
            }
         },
@@ -724,7 +726,8 @@ $(function(){
                 options.dataSource.postProcess = function (results) {
                     let x = results.reduce(function(map, entry) {
                         //let newItems = entry.value.split('|');
-                        entry.value = entry.value.replace(/<[^>]*>/g,"");
+                        //entry.value = entry.value.replace(/<[^>]*>/g,"");
+                        entry.value = entry.value.replace(/<h4>Источники списка:.*$/g,"");
                         let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
                         return map.concat(newItems);
                     }, [])
