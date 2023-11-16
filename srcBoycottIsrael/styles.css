@@ -6,7 +6,10 @@
 .author .img-container_item {
     width:50px !important;
 }
-
+.dx-theme-generic-typography a {
+    color: #0000FF !important;
+    font-size:110%;
+}
 
 
 
