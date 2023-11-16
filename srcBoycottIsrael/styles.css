@@ -10,6 +10,10 @@
     color: #0000FF !important;
     font-size:110%;
 }
+.dx-datagrid-rowsview tr:hover td.b b {  /*ADD выделение строки под курсором*/
+  color: #808080 !important;
+}
+
 
 
 
