@@ -126,6 +126,12 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(Levi’s|Levis)/g,"Levis");
         data = data.replace(/(Bristol-Myers|Bristol Myers)/g,"Bristol-Myers");
         data = data.replace(/(HeidelbergCement|Heidelberg Cement)/g,"HeidelbergCement");
+        data = data.replace(/(HaHayal|Ha-Hayal)/g,"Ha-Hayal");
+        data = data.replace(/(Kit Kat|KitKat)/g,"KitKat");
+        data = data.replace(/(Kleen Bebe|KleenBebe)/g,"Kleen Bebe");
+        data = data.replace(/(Lays|Lay’s)/g,"Lays");
+        data = data.replace(/(Levis|Levi’s)/g,"Levis");
+        data = data.replace(/(Max Factor|MaxFactor)/g,"Max Factor");
 
 
 
