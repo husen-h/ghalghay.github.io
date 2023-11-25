@@ -1153,7 +1153,7 @@
 
 {"a":"<im_70>GoodNites.png</im_70>", "b":"<li><b>Kimberley-Clark</b>", "d":"<li><strong>GoodNites</strong>", "e":"Kids (Детские товары)"},
 
-{"a":"<im_70>DryNites.png</im_70>", "b":"<li><b>Kimberley-Clark</b>", "d":"<li><strong>DryNites</strong>", "e":"Kids (Детские товары)"},
+{"a":"<im_70>DryNites.jpg</im_70>", "b":"<li><b>Kimberley-Clark</b>", "d":"<li><strong>DryNites</strong>", "e":"Kids (Детские товары)"},
 
 {"a":"<im_70></im_70>", "b":"<li><b>Kimberley-Clark</b>", "d":"<li><strong>Little Swimmers</strong>", "e":"Kids (Детские товары)"},
 {"a":"<im_70></im_70>", "b":"<li><b>Kimberley-Clark</b>", "d":"<li><strong>Kleen Bebe</strong>", "e":"Kids (Детские товары)"},
