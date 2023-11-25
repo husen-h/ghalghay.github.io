@@ -491,7 +491,7 @@ $(function(){
         width: '70',  //см "columnMinWidth"
         dataField: 'a',
         //alignment: "right",  //!!
-        caption: 'logo',
+        caption: 'Логотип',
         cssClass: "a", //Задает классCSS,прим-ый к яч-м: ".dx-data-row .cell-highlighted {"
 
 
