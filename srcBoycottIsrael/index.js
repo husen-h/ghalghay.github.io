@@ -478,8 +478,6 @@ $(function(){
 
 
 
-
-
     {
         //hidingPriority: 1, //приоритет для адаптивности
         placeholder: "↓ Фильтр…",

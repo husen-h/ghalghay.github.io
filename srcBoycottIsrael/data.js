@@ -1139,7 +1139,6 @@
 {"a":"<im_70>SK-II.png</im_70>", "b":"<li><b>Procter & Gamble (P&G)</b>", "d":"<li><strong>SK-II</strong>", "e":"Health care and personal hygiene (Медицина и личная гигиена)"},
 
 
-
 {"a":"<im_70>Aptamil.png</im_70>", "b":"<li><b>Nutricia</b>", "d":"<li><strong>Aptamil</strong>", "e":"Kids (Детские товары)"},
 
 {"a":"<im_70>Nutrilon.png</im_70>", "b":"<li><b>Nutricia</b>", "d":"<li><strong>Nutrilon</strong>", "e":"Kids (Детские товары)"},
