@@ -118,7 +118,6 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(Ambi Pur|Ambipur)/g,"Ambipur");
         data = data.replace(/(Clear Blue|Clearblue)/g,"Clearblue");
         data = data.replace(/(Coca-Cola|Coca Cola)/g,"Coca Cola");
-        data = data.replace(/(Coffee-Mate|Coffee Mate)/g,"Coffee Mate");
         data = data.replace(/(Glaceau Smart Water|Glaceau Smartwater)/g,"Glaceau Smart Water");
         data = data.replace(/(Soda Stream|SodaStream)/g,"SodaStream");
         data = data.replace(/(&|and)/g,"and");
@@ -132,6 +131,8 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(Lays|Lay’s)/g,"Lays");
         data = data.replace(/(Levis|Levi’s)/g,"Levis");
         data = data.replace(/(Max Factor|MaxFactor)/g,"Max Factor");
+        data = data.replace(/(J7|J-7)/g,"J-7");
+        data = data.replace(/(Coffee-Mate|coffeemate|Coffee mate)/g,"Coffee mate");
 
 
 
@@ -147,6 +148,11 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
 
 
         //data = data.replace(/<br>/g,"\n");  //чтобы слова не слипались послу уд. тегов
+
+
+
+
+        //data = data.replace(/(<a [^>]*><img [^>]*><\/a>)/g,"");
 
         data = data.replace(/(\u0301|\u0300|\u0308|\u0302|\u030C|\u0304|<\/y>~|\u007C\u007C|<[^>]*>|\u00B6)/g,""); //¶=u00B6||̈=\u0308||    диапазон символов: [\u0300-\u036f]  [̀ - \u0300]
 
@@ -461,6 +467,99 @@ $(function(){
         visible: true
     },
     columns: [
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        //hidingPriority: 1, //приоритет для адаптивности
+        placeholder: "↓ Фильтр…",
+        allowHeaderFiltering: false,
+        //allowFiltering: false,
+        //headerFilter: false,
+        //allowSorting: false,
+        encodeHtml: false,
+        width: '70',  //см "columnMinWidth"
+        dataField: 'a',
+        //alignment: "right",  //!!
+        caption: 'logo',
+        cssClass: "a", //Задает классCSS,прим-ый к яч-м: ".dx-data-row .cell-highlighted {"
+
+
+        //удаление/замены ИЗ ОТОБРЖАЕМЫХ РЕЗУЛЬТАТОВ
+        calculateCellValue: function(rowData){
+           if(rowData.a){
+             var text = rowData.a.replace(/#/g,"");
+             //////text = text.replace(/(<li><b>.*?<\/b>)\r\n<li><l>(<b>.*?<\/b>)<\/l>/g, "<li>$2$1");
+             //text = text.replace(/(\|\|)/g, "<sep3>||</sep3>");
+
+             //<im>D:/grp_027/Истинг.jpg</im>
+//<im_100>D:/Lib/(КАВКАЗ/(PICs/(Г1АЬРЧОШ/(((((((((GRPs/grp_028/isting_studio_79982081_200222814441797_8323120951432449976_n.jpg</im_100><im_60>D:/Lib/(КАВКАЗ/(PICs/(Г1АЬРЧОШ/(((((((((GRPs/grp_028/isting_studio_79982081_200222814441797_8323120951432449976_n.jpg</im_60><im_60>D:/Lib/(КАВКАЗ/(PICs/(Г1АЬРЧОШ/(((((((((GRPs/grp_028/17 век — Фуртоуг — «Истинг фамилии Ахриевых».png</im_60>
+             text = text.replace(/<im_70><\/im_70>/g,"");
+             text = text.replace(/<im_70>(.*?)<\/im_70>/g,"<a href='srcBoycottIsrael\\logo\\$1' target='blank'><img class='im_70' src='srcBoycottIsrael\\logo\\$1'></a>");
+
+             return text;
+             //return b_d_column_repl(text);
+           }
+        },
+
+
+        //удаление акцентов, тегов - для отдельного использования
+        calculateFilterExpression: function(value, selectedFilterOperation, target){
+        var getter = function(data) {
+            var data  = data['a'].normalize('NFD').replace(/<[^>]*>/g,"");
+            return data;
+        };
+        value = value.normalize('NFD').replace(/<[^>]*>/g,"");
+        return [getter, selectedFilterOperation || "contains", value];
+        }
+
+/*
+        //удаление акцентов, тегов - для отдельного использования
+        calculateFilterExpression: function(value, selectedFilterOperation, target){
+        var getter = function(data) {
+            var data  = data['b'].normalize('NFD').replace(/([\u0300-\u036f]|<y><\/y>~|\u007C\u007C|<[^>]*>)/g,""); //||
+            data = data.replace(/\u0451/g,"\u0435"); //ё—е
+            //data = data.replace('\/\/', "\r\n"); //« // »    \u0020\u002F\u002F\u0020
+            return data;
+        };
+        value = value.normalize('NFD').replace(/([\u0300-\u036f]|<y><\/y>~|\u007C\u007C|<[^>]*>)/g,"");
+        value = value.replace(/\u0451/g,"\u0435"); //ё—е
+        return [getter, selectedFilterOperation || "contains", value];
+        }
+*/
+
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
         //hidingPriority: 1, //приоритет для адаптивности
         placeholder: "↓ Фильтр (RegEx)…",

@@ -229,7 +229,7 @@ html {
 
 
 /*колоноки*/
-.dx-data-row .a   {}
+.dx-data-row .a   {padding:0px !important; margin:0px !important;}
 .a .dx-placeholder {color: #9EA5B4 !important;}
 .a .dx-datagrid.dx-filter-menu .dx-menu-item-has-icon .dx-icon { /*знач*/
     color: #9EA5B4 !important;}
@@ -1139,9 +1139,24 @@ abr[ttl]:focus::after {
 
 
 
-.im_100 {width:100%; padding:0px !important; margin:0px !important;}
-.im_60 {width:60px;}
 
+.im_70 {width:100%; padding:0px !important; margin:0px !important;
+}
+
+.im_70 {Xwidth:70px; max-height:160px; vertical-align:top; Xwidth:25%; border: 0px solid blue;
+/*   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   width: 100%;
+   height: 100px;*/
+}
+.im_70:hover {
+    filter: brightness(130%);
+    -webkit-filter: brightness(130%);
+    Xfilter: saturate(2);
+    X-webkit-filter: saturate(2);
+}
+.im_70 {width:100% !important; height:auto !important; padding:0px !important; margin:0px !important; filter: brightness(80%);}
 
 
 
