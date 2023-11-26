@@ -486,7 +486,7 @@ $(function(){
         //headerFilter: false,
         //allowSorting: false,
         encodeHtml: false,
-        width: '3%',  //см "columnMinWidth"
+        width: '70',  // 6%     см "columnMinWidth"
         dataField: 'a',
         //alignment: "right",  //!!
         caption: 'Логотип',
@@ -571,7 +571,7 @@ $(function(){
         //headerFilter: false,
         //allowSorting: false,
         encodeHtml: false,
-        width: '33%',
+        width: '32%',
         dataField: 'b',
         caption: 'Материнская компания',
         headerCellTemplate: function (header, info) {
@@ -665,7 +665,7 @@ $(function(){
         placeholder: "↓ Фильтр (RegEx)…",
         allowHeaderFiltering: false,
         encodeHtml: false,
-        width: '33%',
+        width: '32%',
         dataField: 'd',
         caption: 'Дочерняя компания',
         //caption: '<rus>',
@@ -798,7 +798,7 @@ $(function(){
 
         //allowSorting: false,
         encodeHtml: false,
-        width: '33%',
+        width: '30%',
         dataField: 'e',
         //alignment: "right",  //!!
         caption: 'Сектор',
@@ -883,7 +883,7 @@ $(function(){
                                      //.dx-data-row .cell-highlighted {
         //allowSorting: false,
         encodeHtml: false,
-        width: '50%',
+        width: '45%',
         dataField: 'd',
         caption: '#4',
         calculateFilterExpression: function (value, selectedFilterOperations, target) {  
