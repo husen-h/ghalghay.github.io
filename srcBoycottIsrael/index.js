@@ -486,7 +486,7 @@ $(function(){
         //headerFilter: false,
         //allowSorting: false,
         encodeHtml: false,
-        width: '70',  //см "columnMinWidth"
+        width: '3%',  //см "columnMinWidth"
         dataField: 'a',
         //alignment: "right",  //!!
         caption: 'Логотип',
@@ -883,7 +883,7 @@ $(function(){
                                      //.dx-data-row .cell-highlighted {
         //allowSorting: false,
         encodeHtml: false,
-        width: '53%',
+        width: '50%',
         dataField: 'd',
         caption: '#4',
         calculateFilterExpression: function (value, selectedFilterOperations, target) {  
