@@ -950,7 +950,7 @@ selaa, xayor, kar95, kur05, nic04
   .dx-data-row .d, 
   .dx-data-row .e {
     background: #ffffff !important;  /*zebra*/
-    padding-left: 1.1em !important;
+    padding-left: 1.1em !important;  /* 0.4em */
     padding-right: 0.4em !important;
   }
   .dx-data-row .d li {
@@ -1021,6 +1021,7 @@ selaa, xayor, kar95, kur05, nic04
    .c:blank li {
     display: none;
   }*/
+  h4 {padding: 10px !important;}
 }
 
 

@@ -951,8 +951,8 @@ selaa, xayor, kar95, kur05, nic04
   .dx-data-row .e {
     display: grid;
     grid-auto-columns: 100% !important;
-    width: 294px !important;
-    max-width: 294px !important; /*264%*/
+    width: 290px !important;
+    max-width: 290px !important; /*264%*/
     white-space: normal !important;
   }
   .dx-data-row .c, 
@@ -1030,7 +1030,7 @@ selaa, xayor, kar95, kur05, nic04
    .c:blank li {
     display: none;
   }*/
-
+h4 {padding: 10px !important;}
 
 }
 
