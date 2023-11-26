@@ -945,22 +945,21 @@ selaa, xayor, kar95, kur05, nic04
 
 
 
-  /*.dx-data-row .a, */
   .dx-data-row .b, 
   .dx-data-row .c, 
   .dx-data-row .d, 
   .dx-data-row .e {
     display: grid;
     grid-auto-columns: 100% !important;
-    width: 300px !important;
-    max-width: 300px !important; /*264%*/
+    width: 294px !important;
+    max-width: 294px !important; /*264%*/
     white-space: normal !important;
   }
   .dx-data-row .c, 
   .dx-data-row .d, 
   .dx-data-row .e {
     background: #ffffff !important;  /*zebra*/
-    padding-left: 1.1em !important;
+    padding-left: 0.4em !important;
     padding-right: 0.4em !important;
   }
   .dx-data-row .d li {
