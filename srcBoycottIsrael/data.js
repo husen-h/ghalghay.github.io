@@ -1905,7 +1905,7 @@
 
 {"a":"<im_70>Always_Dicreet.jpg</im_70>", "b":"<li><b>Always Dicreet</b> <sup><a href='https://boycott.thewitness.news/target/always' target='_blank'>*</a></sup>", "d":"<li><b>Procter & Gamble (P&G)</b> <sup><a href='https://boycott.thewitness.news/target/procterandgamble' target='_blank'>*</a></sup>", "e":"Health care and personal hygiene (Медицина и личная гигиена)"},
 
-{"a":"<im_70>Just.png</im_70>", "b":"<li><b>Just</b>", "d":"<li><b>Procter & Gamble (P&G)</b> <sup><a href='https://boycott.thewitness.news/target/procterandgamble' target='_blank'>*</a></sup>", "e":"Health care and personal hygiene (Медицина и личная гигиена)"},
+{"a":"<im_70>Just.jpg</im_70>", "b":"<li><b>Just</b>", "d":"<li><b>Procter & Gamble (P&G)</b> <sup><a href='https://boycott.thewitness.news/target/procterandgamble' target='_blank'>*</a></sup>", "e":"Health care and personal hygiene (Медицина и личная гигиена)"},
 
 {"a":"<im_70>This_is_L.png</im_70>", "b":"<li><b>This is L</b>", "d":"<li><b>Procter & Gamble (P&G)</b> <sup><a href='https://boycott.thewitness.news/target/procterandgamble' target='_blank'>*</a></sup>", "e":"Health care and personal hygiene (Медицина и личная гигиена)"},
 
