@@ -133,6 +133,17 @@ function gCalculateFilterExpression (value, selectedFilterOperations, target, se
         data = data.replace(/(Max Factor|MaxFactor)/g,"Max Factor");
         data = data.replace(/(J7|J-7)/g,"J-7");
         data = data.replace(/(Coffee-Mate|coffeemate|Coffee mate)/g,"Coffee mate");
+        //data = data.replace(/(KFS|KFC)/g,"KFC");
+        data = data.replace(/(Чудо-ягода|Чудо ягода)/g,"Чудо-ягода");
+        data = data.replace(/(Bodyarmor|Body Armor)/g,"Body Armor");
+        data = data.replace(/(Clearblue|Clear Blue)/g,"Clear Blue");
+        data = data.replace(/(Purelife|Pure Life)/g,"Pure Life");
+        data = data.replace(/(Wimm-Bill-Dann|Вимм-Билль-Данн|Wimm Bill Dann|Вимм Билль Данн)/g,"Вимм-Билль-Данн");
+        data = data.replace(/(Covergirl|Cover Girl)/g,"Cover Girl");
+        data = data.replace(/(TAFTOyS|TAF TOyS)/g,"TAFTOyS");
+        data = data.replace(/(Hewlett Packard|HP)/g,"HP");
+        data = data.replace(/(HP|Hewlett Packard)/g,"Hewlett Packard");
+        data = data.replace(/(Tide|Taid)/g,"Tide");
 
 
 
@@ -505,6 +516,7 @@ $(function(){
              text = text.replace(/<im_70><\/im_70>/g,"");
              text = text.replace(/<im_70>(.*?)<\/im_70>/g,"<a href='srcBoycottIsrael\\logo\\$1' target='blank'><img class='im_70' src='srcBoycottIsrael\\logo\\$1'></a>");
 
+
              return text;
              //return b_d_column_repl(text);
            }
@@ -561,19 +573,11 @@ $(function(){
     {
         //hidingPriority: 1, //приоритет для адаптивности
         placeholder: "↓ Фильтр (RegEx)…",
-        headerFilter: {
-          dataSource: function(options){
-                options.dataSource.pageSize = 2000;
-            }
-        },
-        //allowHeaderFiltering: false,
-        //allowFiltering: false,
-        //headerFilter: false,
-        //allowSorting: false,
+        allowHeaderFiltering: false,
         encodeHtml: false,
         width: '32%',
         dataField: 'b',
-        caption: 'Материнская компания',
+        caption: 'Дочерняя компания',
         headerCellTemplate: function (header, info) {
             $('<div>')
                 .html(info.column.caption)
@@ -608,42 +612,17 @@ $(function(){
            }
         },
 
-/*
-        //удаление/замены ИЗ ОТОБРЖАЕМЫХ РЕЗУЛЬТАТОВ
-        calculateCellValue: function(rowData){
-           if(rowData.b){
-             var text = rowData.b.replace(/#/g,"");
-             //text = text.replace(/(—)/g, "–");  //длинное тире — на среднее
-             return text;
-           }
-        },
-*/
 
         //sortOrder: 'asc', //undefined | 'asc' | 'desc'
         filterOperations: ['contains','='],
         calculateFilterExpression: function (value, selectedFilterOperations, target) {  
             return gCalculateFilterExpression (value, selectedFilterOperations, target, this);
         },
-        headerFilter: {
-          dataSource: function(options){
-                options.dataSource.pageSize = 2000; //https://js.devexpress.com/Documentation/ApiReference/Data_Layer/DataSource/Configuration/#pageSize
-                options.dataSource.postProcess = function (results) {
-                    let x = results.reduce(function(map, entry) {
-                        //let newItems = entry.value.split('|');
-                        entry.value = entry.value.replace(/<[^>]*>/g,"");
-                        let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
-                        return map.concat(newItems);
-                    }, [])
-                    .filter((e, i , arr) => arr.indexOf(e) === i && e.length)
-                    .sort(function(a, b) { //сортировка
-                        var a = a.toLowerCase(), b = b.toLowerCase();
-                        return a < b ? -1 : (a > b ? 1 : 0);
-                    })
-                    .map((e, i , arr) => ({text:e, value:['b', 'contains', e]}));
-                    return x;
-                };
-            }
-        }
+
+
+
+
+
     },
 	
 	
@@ -659,16 +638,19 @@ $(function(){
 	
 	
 	
-	
+
     {
         //hidingPriority: 1, //приоритет для адаптивности
         placeholder: "↓ Фильтр (RegEx)…",
-        allowHeaderFiltering: false,
+        //allowHeaderFiltering: false,
+        //allowFiltering: false,
+        //headerFilter: false,
+        //allowSorting: false,
+        //alignment: "right",  //!!
         encodeHtml: false,
         width: '32%',
         dataField: 'd',
-        caption: 'Дочерняя компания',
-        //caption: '<rus>',
+        caption: 'Материнская компания',
         headerCellTemplate: function (header, info) {
             $('<div>')
                 .html(info.column.caption)
@@ -682,11 +664,14 @@ $(function(){
         calculateCellValue: function(rowData){
            if(rowData.d){
              var text = rowData.d.replace(/#/g,"");
+
+             text = text.replace(/(\|)/g, "<sep>|</sep>\n"); //если использовалось в headerFilter
+
              //var text = rowData.d.replace(/(—)/g, "–");  //длинное тире — на среднее
-             text = text.replace(/(●)/g, "<sep2>●</sep2>");
+             //text = text.replace(/(●)/g, "<sep2>●</sep2>");
 
 
-             text = text.replace(/ — /g, "&nbsp;— ");
+             //text = text.replace(/ — /g, "&nbsp;— ");
 
              //text = text.replace(/( \d+\)| \d+\.) /g, "<br><li>$1 ");
              //text = text.replace(/([бвд])\.([аеиоӀу])/g,"<cc>$1</cc>$2"); //Николс — обработка точки после кирилл. класса
@@ -738,6 +723,36 @@ $(function(){
 
 
 
+        /*ЗНАЧЕНИЯ В БАЗЕ НЕ ДОЛЖНЫ БЫТЬ ПУСТЫМИ!!*/
+        /*headerFilter: {
+          dataSource: function(options){
+                options.dataSource.pageSize = 2000;
+            }
+        },*/
+        headerFilter: {
+          dataSource: function(options){
+                options.dataSource.pageSize = 2000; //https://js.devexpress.com/Documentation/ApiReference/Data_Layer/DataSource/Configuration/#pageSize
+                options.dataSource.postProcess = function (results) {
+                    let x = results.reduce(function(map, entry) {
+                        //let newItems = entry.value.split('|');
+                        //теги с содержимым — удалять с пробелом перед ними: 
+                        // « <sup>.*?</sup>»
+                        entry.value = entry.value.replace(/(<h4>БОЙКОТ КОМПАНИЙ.*$| ?<sup>.*?<\/sup>|<li>|<\/?b>)/g,""); //<[^>]*> ошибка при удалении всех тегов
+
+                        let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
+                        return map.concat(newItems);
+                    }, [])
+                    .filter((e, i , arr) => arr.indexOf(e) === i && e.length)
+                    .sort(function(a, b) { //сортировка
+                        var a = a.toLowerCase(), b = b.toLowerCase();
+                        return a < b ? -1 : (a > b ? 1 : 0);
+                    })
+                    .map((e, i , arr) => ({text:e, value:['d', 'contains', e]}));
+                    return x;
+                };
+            }
+        }
+
 
 
     },
@@ -761,47 +776,21 @@ $(function(){
     {
         //hidingPriority: 1, //приоритет для адаптивности
         placeholder: "↓ Фильтр…",
+        //allowHeaderFiltering: false,
         //allowFiltering: false,
         //headerFilter: false,
-
-
-
-        headerFilter: {
-          dataSource: function(options){
-                options.dataSource.pageSize = 2000;
-            }
-        },
-        /*фриланс:*/ /*
-        headerFilter: {
-          dataSource: function(options){
-                options.dataSource.pageSize = 2000; //https://js.devexpress.com/Documentation/ApiReference/Data_Layer/DataSource/Configuration/#pageSize
-                options.dataSource.postProcess = function (results) {
-                    let x = results.reduce(function(map, entry) {
-                        //let newItems = entry.value.split('|');
-                        let newItems = entry.value ? entry.value.split('|') : [];
-                        return map.concat(newItems);
-                    }, [])
-                    .filter((e, i , arr) => arr.indexOf(e) === i && e.length)
-                    //сортировка
-                    .sort(function(a, b) {
-                        var a = a.toLowerCase(), b = b.toLowerCase();
-                        return a < b ? -1 : (a > b ? 1 : 0);
-                    })
-                    .map((e, i , arr) => ({text:e, value:['e', 'contains', e]}));
-                    return x;
-                };
-            }
-        },*/
-
-
-
-
         //allowSorting: false,
+        //alignment: "right",  //!!
         encodeHtml: false,
         width: '30%',
         dataField: 'e',
-        //alignment: "right",  //!!
         caption: 'Сектор',
+        headerCellTemplate: function (header, info) {
+            $('<div>')
+                .html(info.column.caption)
+                //.css('font-size', '16px')
+                .appendTo(header);
+        },
         cssClass: "e", //Задает классCSS,прим-ый к яч-м: ".dx-data-row .cell-highlighted {"
 
 
@@ -812,23 +801,28 @@ $(function(){
              var text = rowData.e.replace(/#/g,"");
              //////text = text.replace(/(МатТерм1933)/g, "Математические термины для ингушской начальной школы (1933)");
 
-
-
-
              //text = text.replace(/(.*?)/g, "<span title='$1'>$1</span>");
 
-
-
-             text = text.replace(/(\|)/g, "<sep>|</sep>\n");
+             text = text.replace(/(\|)/g, "<sep>|</sep>\n"); //если использовалось
              return text;
            }
         },
+
+
+        /*ЗНАЧЕНИЯ В БАЗЕ НЕ ДОЛЖНЫ БЫТЬ ПУСТЫМИ!!*/
+        /*headerFilter: {
+          dataSource: function(options){
+                options.dataSource.pageSize = 2000;
+            }
+        },*/
         headerFilter: {
           dataSource: function(options){
                 options.dataSource.pageSize = 2000; //https://js.devexpress.com/Documentation/ApiReference/Data_Layer/DataSource/Configuration/#pageSize
                 options.dataSource.postProcess = function (results) {
                     let x = results.reduce(function(map, entry) {
                         //let newItems = entry.value.split('|');
+                        //теги с содержимым — удалять с пробелом перед ними: 
+                        // « <sup>.*?</sup>»
                         //entry.value = entry.value.replace(/<[^>]*>/g,"");
                         entry.value = entry.value.replace(/<h4>Источники списка:.*$/g,"");
                         let newItems = entry.value ? entry.value.split('<sep>|</sep>\n') : [];
@@ -843,7 +837,7 @@ $(function(){
                     return x;
                 };
             }
-        },
+        }
 
 
 

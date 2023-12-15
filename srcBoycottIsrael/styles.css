@@ -237,7 +237,7 @@ html {
 .c .dx-placeholder {color: #9EA5B4 !important;}
 .c .dx-datagrid.dx-filter-menu .dx-menu-item-has-icon .dx-icon { /*знач*/
     color: #9EA5B4 !important;}
-.dx-data-row .d b {Xfont-weight:500; font-weight:normal !important;}
+.dx-data-row .d b {font-weight:700; Xfont-weight:normal !important;}
 /*strong---*/
 .dx-data-row .d strong {font-weight:500 !important; Xfont-weight:bold !important;}
 .dx-data-row .d strong > i {font-weight:500 !important; font-weight:bold !important;}
@@ -560,7 +560,7 @@ dd {
 
 i sup {margin-left:0px; color:#3D3D3D;}
 
-sup{margin-left:-3px; font-weight:normal; font-style:normal; color:#E6002D;}
+sup{margin-left:-3px; font-weight:normal; font-style:normal; color:#000000;}
 sup{font-size:12px !important;line-height:0;position:relative;vertical-align:baseline;}
 sup{top:-0.5em;}
 sub{bottom:-0.25em;}
@@ -1149,16 +1149,15 @@ abr[ttl]:focus::after {
    width: 100%;
    height: 100px;*/
 }
-.im_70:hover {
-    filter: brightness(130%);
-    -webkit-filter: brightness(130%);
+.dx-datagrid-rowsview tr:hover .im_70 {
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
     Xfilter: saturate(2);
     X-webkit-filter: saturate(2);
 }
-.im_70 {width:100% !important; height:auto !important; padding:0px !important; margin:0px !important; filter: brightness(80%);}
+.im_70 {width:100% !important; height:auto !important; padding:0px !important; margin:0px !important; filter: brightness(90%);}
 
 
-
-
+issues {font-family: monospace; color:#800080;}
 
 
